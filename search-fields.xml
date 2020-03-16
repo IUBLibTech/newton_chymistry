@@ -37,7 +37,7 @@
 					concat($id/collection, ' ', $id/idno),
 					$id/repository,
 					$id/institution
-				),
+				)[normalize-space()],
 				', '
 			)
 		"
