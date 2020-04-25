@@ -1,0 +1,1 @@
+Files/directories here are required by the Xubmit repository workflow system.  The common example of support files are XSLT that are involved in transformation pipelines. These must be copied onto the server, in the Xubmit home directory, using the hierarchy reflected here.
