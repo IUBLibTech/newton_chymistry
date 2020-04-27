@@ -3,7 +3,8 @@
   xmlns:cvs="http://nwalsh.com/rdf/cvs#" xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xpath-default-namespace="http://www.tei-c.org/ns/1.0">
   <xsl:output method="xml" indent="yes"/>
 
   <xsl:param name="xuser"/>
@@ -13,16 +14,16 @@
   <xsl:param name="xfile"/>
 
   <xsl:template match="/">
-    <xsl:apply-templates select="tei:TEI"/>
+    <xsl:apply-templates select="TEI"/>
   </xsl:template>
 
-  <xsl:template match="tei:TEI">
+  <xsl:template match="TEI">
     <rdf:RDF>
       <rdf:Description rdf:about="{$xfile}">
-        <dc:identifier><xsl:value-of select="teiHeader/fileDesc/sourceDesc/msDescription/msIdentifier/altIdentifier/idno"/></dc:identifier>
-        <dc:title><xsl:value-of select="teiHeader/fileDesc/sourceDesc/msDescription/msContents/msItem/title"/></dc:title>
+        <dc:identifier><xsl:value-of select="teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier/idno[@type='iunp']"/></dc:identifier>
+        <dc:title><xsl:value-of select="teiHeader/fileDesc/sourceDesc/msDesc/msContents/msItem/title"/></dc:title>
         <dc:language><xsl:apply-templates select="teiHeader/profileDesc/langUsage/language"/></dc:language>
-        <dc:relation><xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/msDescription/msIdentifier"/></dc:relation>
+        <dc:relation><xsl:apply-templates select="teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier"/></dc:relation>
         <dc:coverage>
           <xsl:variable name="status" select="teiHeader/fileDesc/publicationStmt/availability/@status"/>
           <xsl:choose>
