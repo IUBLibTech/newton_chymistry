@@ -38,6 +38,7 @@
 							<td><a href="../text/{$name}/diplomatic">View as diplomatic HTML</a></td>
 							<td><a href="../solr/{$name}/">View Solr record update message</a></td>
 							<td><a href="../iiif/{$name}/manifest">View IIIF manifest</a></td>
+							<td><a href="../xubmit/{$name}.xml">View as Xubmit metadata</a></td>
 						</tr>
 					</xsl:for-each>
 				</table>
