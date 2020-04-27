@@ -258,6 +258,31 @@
 				</p:when>
 			</p:choose>
 		</p:when>
+		<p:when test="starts-with($relative-uri, 'xubmit/') ">
+			<!-- 
+				This sub-pipeline is just a test harness for Xubmit's metadata-extraction stylesheet,
+				and does not play any role in the Chymistry website itself.
+				In production, Xubmit runs this stylesheet to generate a metadata record from TEI files
+				which have been uploaded into the Xubmit repository. 
+				Xubmit also passes several parameters to the stylesheet which are simply included
+				verbatim in the resulting metadata record. Here we pass dummy values for those parameters.
+			-->
+			<p:variable name="text" select="substring-after($relative-uri, 'xubmit/')"/>
+			<p:load name="text">
+				<p:with-option name="href" select="concat('../p5/', $text)"/>
+			</p:load>
+			<p:xslt>
+				<p:with-param name="xuser" select=" '(xuser)' "/>
+				<p:with-param name="xlog" select=" '(xlog)' "/>
+				<p:with-param name="xdate" select=" '(xdate)' "/>
+				<p:with-param name="xversion" select=" '(xversion)' "/>
+				<p:with-param name="xfile" select=" '(xfile)' "/>
+				<p:input port="stylesheet">
+					<p:document href="../xubmit/repositories/newtonchym/xslt/field.xsl"/>
+				</p:input>
+			</p:xslt>
+			<z:make-http-response/>
+		</p:when>
 		<!-- temporary; for viewing XSLT -->
 		<p:when test="$relative-uri='admin/indexer'">
 			<chymistry:generate-indexer>
