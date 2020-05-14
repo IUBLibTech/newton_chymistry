@@ -25,6 +25,11 @@
 
 
    <!-- TRANSFORMATION TEMPLATES -->
+  <xsl:template match="TEI.2">
+    <TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://dlib.indiana.edu/lib/xml/newton/tei_all.xsd">
+      <xsl:apply-templates select="*|@*|processing-instruction()|comment()|text()"/>
+    </TEI>
+  </xsl:template>
    
    <xsl:template match="milestone[@unit='folio']/@n">
    	<xsl:copy/>
