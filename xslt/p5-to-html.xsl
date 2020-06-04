@@ -378,7 +378,28 @@
 	<xsl:template match="milestone[@unit='folio'][@xml:id]">
 		<xsl:element name="figure">
 			<xsl:apply-templates mode="create-attributes" select="."/>
-			<xsl:element name="figcaption"><xsl:value-of select="@n"/></xsl:element>
+			<xsl:element name="figcaption">
+				<!-- make the folio marker a link to switch between diplomatic and normalized views -->
+				<xsl:choose>
+					<xsl:when test="$view='diplomatic'">
+						<xsl:element name="a">
+							<xsl:attribute name="href" select="concat('normalized#', @xml:id)"/>
+							<xsl:attribute name="title" select="concat('view normalized transcription folio ', @n)"/>
+							<xsl:value-of select="@n"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:when test="$view='normalized'">
+						<xsl:element name="a">
+							<xsl:attribute name="href" select="concat('diplomatic#', @xml:id)"/>
+							<xsl:attribute name="title" select="concat('view diplomatic transcription folio ', @n)"/>
+							<xsl:value-of select="@n"/>
+						</xsl:element>
+					</xsl:when>
+					<xsl:otherwise><!-- introductions -->
+						<xsl:value-of select="@n"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:element>
 			<!--
 			disabled in favour of the 📄 character until such time as the TEI actually contains thumbnail URIs
 			-->
