@@ -40,12 +40,74 @@
 		<z:make-http-response/>
 	</p:declare-step>
 	
+	<!-- for request URI "admin/purge", clear the Solr index -->
+	<p:declare-step name="purge-index" type="chymistry:purge-index">
+		<p:input port="source"/>
+		<p:output port="result"/>
+		<p:option name="solr-base-uri" required="true"/>
+		<!-- generate the HTTP POST command to purge Solr's index -->
+		<p:add-attribute name="solr-purge-command" match="/c:request" attribute-name="href">
+			<p:with-option name="attribute-value" select="concat($solr-base-uri, 'update?commit=true')"/>
+			<p:input port="source">
+				<p:inline>
+					<c:request method="post">
+						<c:body content-type="text/xml">
+							<delete>
+								<query>*:*</query>
+							</delete>
+						</c:body>
+					</c:request>
+				</p:inline>
+			</p:input>
+		</p:add-attribute>
+		<!-- submit the deletion request to Solr -->
+		<p:http-request/>
+		<!-- convert Solr response to a friendly HTML page -->
+		<p:template name="purge-report">
+			<p:with-param name="response-code" select="/response/lst[@name='responseHeader']/int[@name='status']/text()"/>
+			<p:input port="template">
+				<p:inline>
+					<html xmlns="http://www.w3.org/1999/xhtml">
+						<head><title>Solr index purge</title></head>
+						<body>
+							<section class="content">
+								<div>
+									<h1>Solr index purge</h1>
+									<p>
+									{
+										if ($response-code='0') then 
+											'Solr index purged' 
+										else 
+											concat(
+												'Failed to purge Solr index. ',
+												if ($response-code) then
+													concat(
+														'Solr returned response code ', 
+														$response-code
+													)
+												else
+													''
+											)
+									}
+									</p>
+									<p><a href="../admin">Return to admin page</a></p>
+								</div>
+							</section>
+						</body>
+					</html>
+				</p:inline>
+			</p:input>
+		</p:template>
+		<z:make-http-response content-type="text/html"/>
+	</p:declare-step>
+	
 	<p:declare-step name="reindex" type="chymistry:reindex">
 		<p:input port="source"/>
 		<p:output port="result"/>
 		<p:option name="solr-base-uri" required="true"/>
-		<!-- reindex all the P5 files except the bibliography file CHYM000001.xml -->
-		<p:directory-list name="list-p5-files" path="../p5/" include-filter=".+\.xml$" exclude-filter="CHYM000001\.xml"/>
+		<!-- reindex all the P5 files except the bibliography file CHYM000001.xml and any file whose name includes a hyphen, 
+		which are fragments of larger composite texts, and dealt with only as composites -->
+		<p:directory-list name="list-p5-files" path="../p5/" include-filter=".+\.xml$" exclude-filter="CHYM000001\.xml|.+-.+.xml$"/>
 		<p:add-xml-base relative="false" all="true"/>
 		<p:for-each>
 			<p:iteration-source select="//c:file"/>
@@ -116,6 +178,7 @@
 		<p:load name="text">
 			<p:with-option name="href" select="concat('../p5/', $text, '.xml')"/>
 		</p:load>
+		<p:xinclude/>
 		<p:xslt name="metadata-fields">
 			<p:with-param name="id" select="$text"/>
 			<p:with-param name="solr-base-uri" select="$solr-base-uri"/>
@@ -202,6 +265,7 @@
 		<p:load name="text">
 			<p:with-option name="href" select="concat('../p5/', $text-id, '.xml')"/>
 		</p:load>
+		<p:xinclude/>
 		<p:xslt>
 			<p:with-param name="base-uri" select="$base-uri"/>
 			<p:with-param name="text-id" select="$text-id"/>
@@ -239,6 +303,7 @@
 		<p:load name="text">
 			<p:with-option name="href" select="concat('../p5/', $text-id, '.xml')"/>
 		</p:load>
+		<p:xinclude/>
 		<p:xslt>
 			<p:with-param name="base-uri" select="$base-uri"/>
 			<p:with-param name="text-id" select="$text-id"/>
@@ -277,6 +342,7 @@
 		<p:load name="text">
 			<p:with-option name="href" select="concat('../p5/', $text, '.xml')"/>
 		</p:load>
+		<p:xinclude/>
 		<p:insert name="bibliography" match="tei:sourceDesc" position="first-child">
 			<p:input port="insertion" select="/tei:TEI/tei:text/tei:body/tei:listBibl">
 				<p:document href="../p5/CHYM000001.xml"/>

@@ -45,6 +45,9 @@
 												<form method="post" action="reindex/">
 													<button>Rebuild Solr index from P5 files</button>
 												</form>
+												<form method="post" action="admin/purge">
+													<button title="Remove all documents from the Solr index">Purge Solr index</button>
+												</form>
 												<form method="post" action="update-schema/">
 													<button>Update Solr schema from <em>search-fields.xml</em></button>
 												</form>
