@@ -234,19 +234,32 @@ NEW >> April 2012
 		visibility: hidden;
 	}
 */
+
+.type-catch {
+	text-align: left;
+	margin-left: 25em
+}
+
+.type-pag {
+	width: 75%
+}
+
 .rend-parallel-docs {
-	display: grid;
+	display: flex;
 	column-gap: 2em;
 }
 .rend-parallel-left {
 	grid-column: 1;
+	padding-right: 10px;
 }
 .rend-parallel-left-30 {
 	grid-column: 1;
 	width: 30em;
+	padding-right: 10px;
 }
 .rend-parallel-right {
 	grid-column: 2;
+	padding-left: 10px;
 }
 
 /*
