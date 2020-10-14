@@ -24,8 +24,9 @@ window.addEventListener(
 				function(event) {
 					// Clicking a thumbnail image should bring up UV with the corresponding canvas in focus 
 					// The thumbnail image's "data-canvas-index" attribute contains its position in the sequence of folios, starting from 0, going to n-1
+					var canvasIndex = this.getAttribute("data-canvas-index");
 					myUV.set(
-						{"canvasIndex": this.getAttribute("data-canvas-index")}
+						{"canvasIndex": canvasIndex}
 					);
 					// Activate the popup window
 					popupDiv.className = "popup active"; // replacing "popup inactive"
