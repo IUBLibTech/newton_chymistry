@@ -26,6 +26,7 @@
 							<xsl:variable name="short-title" select="title[@type='short']"/>
 							<xsl:variable name="title-page" select="title[@level='m']"/>
 							<xsl:variable name="contributors" select="imprint/respStmt"/>
+							<xsl:variable name="publisher" select="imprint/publisher"/>
 							<xsl:variable name="publication-place" select="imprint/pubPlace"/>
 							<xsl:variable name="publication-year" select="imprint/date"/>
 							<xsl:variable name="full-text-link" select="title/@ref"/>
@@ -58,9 +59,17 @@
 										<p>{orgName}{if (resp) then concat(' (', resp, ')') else ()}</p>
 									</xsl:for-each>
 								</xsl:if>
+								<xsl:if test="$publisher">
+									<h2>Publisher:</h2>
+									<p>{$publisher}</p>
+								</xsl:if>
 								<xsl:if test="$publication-place">
 									<h2>Publication Place:</h2>
 									<p>{$publication-place}</p>
+								</xsl:if>
+								<xsl:if test="$publication-year">
+									<h2>Publication Year:</h2>
+									<p>{$publication-year}</p>
 								</xsl:if>
 								<xsl:if test="$full-text-link">
 									<h2>Link to Fulltext:</h2>
