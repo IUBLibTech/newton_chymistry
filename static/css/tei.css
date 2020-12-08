@@ -20,6 +20,7 @@ div.tei-bibl {
 figure.tei-milestone {
 	margin-top: 3em;
 	text-align: center;
+	width:  45vw;
 	color: #7D100B;
 }
 
@@ -241,7 +242,7 @@ NEW >> April 2012
 }
 
 .type-pag {
-	width: 75%
+	width: 65%
 }
 
 .rend-parallel-docs {
@@ -1275,6 +1276,7 @@ details.tei-bibl[open] summary::before{
 	content: "✖";
 }
 details.tei-bibl div.citation-popup {
+	text-align: left;
 	position: absolute;
 	background-color: white;
 	padding: 1em;

@@ -441,17 +441,20 @@
 
 	<!-- bibliographic citations -->
 	<xsl:key name="citation-by-id" match="/TEI/teiHeader/fileDesc/sourceDesc/listBibl/biblStruct[@xml:id]" use="@xml:id"/>
-	<xsl:template match="bibl[@corresp]">
+	<xsl:template match="bibl">
 		<xsl:element name="a">
 			<xsl:apply-templates mode="create-attributes" select="."/>
 			<xsl:apply-templates mode="create-content" select="."/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="bibl[@corresp]" mode="create-attributes">
+	<xsl:template match="bibl" mode="create-attributes">
 		<xsl:variable name="id" select="substring-after(@corresp, '#')"/>
 		<xsl:variable name="full-citation" select="key('citation-by-id', $id)"/>
 		<xsl:variable name="formatted-citation">
-			<xsl:apply-templates mode="citation-popup" select="$full-citation"/>
+			<div class="citation-popup">
+				<xsl:apply-templates mode="citation-popup" select="$full-citation"/>
+				<xsl:apply-templates mode="citation-popup" select="."/>
+			</div>
 		</xsl:variable>
 		<xsl:attribute name="title">
 			<xsl:apply-templates mode="citation-popup" select="serialize($formatted-citation)"/>
@@ -463,7 +466,6 @@
 	<!-- bibliographic citation popups -->
 	<xsl:template match="biblStruct" mode="citation-popup">
 		<!-- for now, just extract the text nodes of the citation -->
-		<div class="citation-popup">
 			<p>
 				<xsl:apply-templates mode="citation-popup" select="monogr/author[*]"/>
 				<xsl:apply-templates mode="citation-popup" select="monogr/title[@type='short']"/>
@@ -476,7 +478,29 @@
 					<a href="{.}">[View Full Text]</a>
 				</xsl:for-each>
 			</p>
-		</div>
+	</xsl:template>
+
+	<xsl:template match="bibl" mode="citation-popup">
+	       <p>
+	           Citation certainty:
+                 <xsl:choose>
+				    <xsl:when test="@corresp and @cert = 'high'">
+				      Likelihood
+				    </xsl:when>
+				    <xsl:when test="@corresp and @cert = 'unknown'">
+                      Unknown Likelihood
+                    </xsl:when>
+                    <xsl:when test="@corresp">
+                      Verified
+                    </xsl:when>
+				    <xsl:otherwise>
+				      Ambiguous
+				    </xsl:otherwise>
+              </xsl:choose>
+	       </p>
+	       <p>
+	           <xsl:apply-templates select="note[@type='biblio']"/>
+	       </p>
 	</xsl:template>
 
 	<xsl:template mode="citation-popup" match="imprint">
