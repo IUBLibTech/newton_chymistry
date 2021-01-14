@@ -12,7 +12,8 @@
 	<xsl:key name="char-by-ref" match="char[@xml:id]" use="concat('#', @xml:id)"/>
 
 	<!-- TODO shouldn't the title be a string constructed from msIdentifer? -->
-	<xsl:variable name="title" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/msItem/title"/>
+	<xsl:variable name="identifier" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier"/>
+	<xsl:variable name="title" select="concat($identifier/collection, ' ',$identifier/idno, ', ', $identifier/repository)"/>
 
 	<!-- get the IIIF manifest -->
 	<xsl:variable name="embedded-manifest-uri" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier/idno[@type='iiif-manifest']"/>
