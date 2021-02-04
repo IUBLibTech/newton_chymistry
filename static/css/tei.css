@@ -20,6 +20,7 @@ div.tei-bibl {
 figure.tei-milestone {
 	margin-top: 3em;
 	text-align: center;
+	width:  45vw;
 	color: #7D100B;
 }
 
@@ -40,7 +41,7 @@ a.tei-bibl::before {
 span[title] {
 	cursor: help;
 }
-.hand {	
+.hand {
 	color: #018B84;
 }
 a.tei-ref.type-annotation::before {
@@ -187,7 +188,7 @@ details div.expansion {
 	content: "\A0\A0\A0\A0\A0\A0";
 }*/
 
-/* apparently unused 
+/* apparently unused
 .p-flush {
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -198,18 +199,18 @@ details div.expansion {
 	white-space: normal;
 }
 */
-/* 
-   ADDED .whiteSpaceWrap element 
+/*
+   ADDED .whiteSpaceWrap element
    July 8, 2009 by TBowman to address wrapping
  */
 
-/* 
-OLD >> ADDED for font-detection Javascript toggle 
+/*
+OLD >> ADDED for font-detection Javascript toggle
 OLD >> Summer 2008 by T Bowman & W Hooper
 
-NEW >> ADDED @font-face 
+NEW >> ADDED @font-face
 NEW >> April 2012
-	
+
 	@font-face {
 	    font-family: Newton;
 	    src: url('fonts/Newton-2010jan-rev.otf');
@@ -234,23 +235,36 @@ NEW >> April 2012
 		visibility: hidden;
 	}
 */
+
+.type-catch {
+	text-align: left;
+	margin-left: 25em
+}
+
+.type-pag {
+	width: 65%
+}
+
 .rend-parallel-docs {
-	display: grid;
+	display: flex;
 	column-gap: 2em;
 }
 .rend-parallel-left {
 	grid-column: 1;
+	padding-right: 10px;
 }
 .rend-parallel-left-30 {
 	grid-column: 1;
 	width: 30em;
+	padding-right: 10px;
 }
 .rend-parallel-right {
 	grid-column: 2;
+	padding-left: 10px;
 }
 
-/* 
-adapted from http://matthewjamestaylor.com/blog/perfect-2-column-double-page.htm 
+/*
+adapted from http://matthewjamestaylor.com/blog/perfect-2-column-double-page.htm
 can be combined with the w-XX width elements and the border elements
 much simpler, just requires one extra div parent element
 plus doesn't need the annoying 80em min-width declaration which causes horiz scroll bar
@@ -259,8 +273,8 @@ plus doesn't need the annoying 80em min-width declaration which causes horiz scr
 /* div.parallel-container {
 						clear:both;
 						float:left;
-						width:100%;			// width of whole page 
-						overflow:hidden;	// This chops off any overhanging divs 
+						width:100%;			// width of whole page
+						overflow:hidden;	// This chops off any overhanging divs
 					} */
 /* common column settings */
 /*
@@ -280,10 +294,10 @@ div.parallel-insideContainer {
 						padding:0 1em 0 1em;
 						overflow:hidden;
 					}  // can go to many columns... ie. parallel-col4, parallel-col5, etc. */
-/* 
-The above COLUMN FORMATTING 
-ADDED July 8, 2009 by TBowman 
-to address <lb> tags in an ADDITION element 
+/*
+The above COLUMN FORMATTING
+ADDED July 8, 2009 by TBowman
+to address <lb> tags in an ADDITION element
 */
 /*
 div.parallel-docs {
@@ -334,7 +348,7 @@ div.parallel-right {
 }
 */
 
-/* 
+/*
 CHANGED July 8, 2008
 Changed 0.02cm to 1px for border-width below
 0.02cm was NOT working in Safari on Windows machines and Mac machines
@@ -1182,7 +1196,7 @@ tr {
 /* Table cell border styles. */
 td.rend-cellBorderRight {
 	border-right: 1px solid black;
-}    
+}
 td.rend-cellBorderBottom {
 	border-bottom: 1px solid black;
 }
@@ -1207,6 +1221,18 @@ td.label {
 /* bibliography styles */
 .rendition-i {
 	font-style: italic;
+}
+
+.rendition-red {
+    color: red;
+}
+.rendition-blackletter {
+    font-family: Old English Five;
+}
+
+@font-face {
+  font-family: 'Old English Five';
+  src: url(https://ff.static.1001fonts.net/o/l/old-english-five.regular.ttf);
 }
 
 ul.tei-listBibl {
@@ -1250,11 +1276,12 @@ details.tei-bibl[open] summary::before{
 	content: "✖";
 }
 details.tei-bibl div.citation-popup {
+	text-align: left;
 	position: absolute;
 	background-color: white;
 	padding: 1em;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
-	border-radius: 0.5em;	
+	border-radius: 0.5em;
 }
