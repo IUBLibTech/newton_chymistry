@@ -1,15 +1,15 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
-	xmlns:c="http://www.w3.org/ns/xproc-step" 
+	xmlns:c="http://www.w3.org/ns/xproc-step"
 	xmlns:tei="http://www.tei-c.org/ns/1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xpath-default-namespace="http://www.tei-c.org/ns/1.0">
-	
+
 	<xsl:template name="render-document-header">
 		<xsl:param name="title"/>
 		<xsl:param name="base-uri" select=" '' "/>
 		<xsl:param name="has-introduction"/>
 		<xsl:param name="current-view"/>
-		<cite><xsl:value-of select="$title"/></cite>
+		<h2><xsl:value-of select="$title"/></h2>
 		<div class="tei-view-selection">
 			<xsl:if test="$has-introduction">
 				<xsl:call-template name="render-view-option">
@@ -33,7 +33,7 @@
 			</xsl:call-template>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template name="render-view-option">
 		<xsl:param name="option-view"/>
 		<xsl:param name="option-label"/>
@@ -48,5 +48,5 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
 </xsl:stylesheet>

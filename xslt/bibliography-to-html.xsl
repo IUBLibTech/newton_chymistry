@@ -83,9 +83,9 @@
 		</html>
 	</xsl:template>
 	
-	<xsl:template match="hi[@rendition='#i']">
+	<xsl:template match="hi">
 		<xsl:element name="span">
-			<xsl:attribute name="class" select=" 'rendition-i' "/>
+			<xsl:attribute name="class" select=" replace(@rendition,'#', 'rendition-') "/>
 			<xsl:apply-templates/>
 		</xsl:element>
 	</xsl:template>
