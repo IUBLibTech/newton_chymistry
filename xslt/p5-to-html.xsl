@@ -293,11 +293,11 @@
 		<!-- When creating content of an <add> element with rend='caret', prepend an actual textual caret -->
 		<!-- The caret is inserted BEFORE the html:ins element which represents the tei:add, because the html:ins
 		may by styled as superscript, and we don't want the caret itself superscripted -->
-		<xsl:if test="tokenize(@rend) = 'caret'">
-			<xsl:text>‸</xsl:text>
-		</xsl:if>
 		<xsl:choose>
 			<xsl:when test="$view = 'diplomatic' ">
+				<xsl:if test="tokenize(@rend) = 'caret'">
+				      <xsl:text>‸</xsl:text>
+				</xsl:if>
 				<xsl:element name="ins">
 					<xsl:apply-templates mode="create-attributes" select="."/>
 					<xsl:apply-templates mode="create-content" select="."/>
@@ -342,6 +342,11 @@
 		</xsl:if>
 		<xsl:next-match/>
 	</xsl:template>
+	<xsl:template match="hi[@rend='norm-u']" mode="create-attributes">
+        <xsl:if test="$view = 'diplomatic' ">
+            <xsl:apply-templates/>
+        </xsl:if>
+	</xsl:template>
 
 	<!-- elements rendered only in normalized view -->
 	<xsl:template match="choice/reg | choice/corr | choice/expan" priority="1">
@@ -349,6 +354,12 @@
 			<xsl:next-match/>
 		</xsl:if>
 	</xsl:template>
+    <xsl:template match="hi[@rend='norm-u']" mode="create-attributes">
+        <xsl:if test="$view = 'normalized' ">
+            <xsl:attribute name="class" select="replace(@rend,'norm', 'rend')"/>
+            <xsl:next-match/>
+        </xsl:if>
+    </xsl:template>
 
 	<!-- quantified significant white space -->
 	<xsl:template match="space[@quantity castable as xs:integer]" mode="create-content">
@@ -463,10 +474,10 @@
 		<xsl:attribute name="href" select="concat('/bibliography#', $id)"/>
 		<xsl:next-match/>
 	</xsl:template>
+	<xsl:template mode="create-content" match="bibl/note"/>
 
 	<!-- bibliographic citation popups -->
 	<xsl:template match="biblStruct" mode="citation-popup">
-		<!-- for now, just extract the text nodes of the citation -->
 			<p>
 				<xsl:apply-templates mode="citation-popup" select="monogr/author[*]"/>
 				<xsl:apply-templates mode="citation-popup" select="monogr/title[@type='short']"/>
@@ -500,7 +511,7 @@
               </xsl:choose>
 	       </p>
 	       <p>
-	           <xsl:apply-templates select="note[@type='biblio']"/>
+	           <xsl:apply-templates mode="citation-popup" select="note[@type='biblio']"/>
 	       </p>
 	</xsl:template>
 

@@ -1278,6 +1278,9 @@ details.tei-bibl[open] summary::before{
 details.tei-bibl div.citation-popup {
 	text-align: left;
 	position: absolute;
+	color: black;
+	font-size: small;
+	font-weight: normal;
 	background-color: white;
 	padding: 1em;
 	border-style: solid;
