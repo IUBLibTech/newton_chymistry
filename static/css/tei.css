@@ -119,6 +119,10 @@ li {
 	text-align: right;
 	display: block;
 }
+.place-left {
+	text-align: left;
+	display: block;
+}
 .place-inline {
 	font-size: small;
 }
