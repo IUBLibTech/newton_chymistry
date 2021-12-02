@@ -75,7 +75,7 @@
 	<p:declare-step name="download-bibliography" type="chymistry:download-bibliography">
 		<p:input port="source"/>
 		<p:output port="result"/>
-		<p:load href="http://algernon.dlib.indiana.edu:8080/xubmit/rest/repository/newtonbib/CHYM000001.xml"/>
+		<p:load href="https://textproc.dlib.indiana.edu/xubmit/rest/repository/newtonbib/CHYM000001.xml"/>
 		<p:store href="../p5/CHYM000001.xml"/>
 		<p:identity>
 			<p:input port="source">
@@ -98,7 +98,7 @@
 		<!-- algernon.dlib.indiana.edu:8080 -->
 		<!-- host was textproc.dlib.indiana.edu -->
 		<p:option name="dc-coverage-regex"/>
-		<p:variable name="xubmit-base-uri" select=" 'http://textproc.dlib.indiana.edu/xubmit/rest/repository/newtonchym/' "/>
+		<p:variable name="xubmit-base-uri" select=" 'https://textproc.dlib.indiana.edu/xubmit/rest/repository/newtonchym/' "/>
 		<p:xslt name="manifest">
 			<p:with-param name="base-uri" select="$xubmit-base-uri"/>
 			<p:with-param name="dc-coverage-regex" select="$dc-coverage-regex"/>

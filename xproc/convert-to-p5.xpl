@@ -12,7 +12,7 @@
 		<p:input port="source"/>
 		<p:output port="result"/>
 		<p:option name="dc-coverage-regex"/>
-		<p:variable name="xubmit-base-uri" select=" 'http://algernon.dlib.indiana.edu:8080/xubmit/rest/repository/newton/' "/>
+		<p:variable name="xubmit-base-uri" select=" 'https://textproc.dlib.indiana.edu/xubmit/rest/repository/newton/' "/>
 		<p:xslt name="manifest">
 			<p:with-param name="base-uri" select="$xubmit-base-uri"/>
 			<p:with-param name="dc-coverage-regex" select="$dc-coverage-regex"/>
