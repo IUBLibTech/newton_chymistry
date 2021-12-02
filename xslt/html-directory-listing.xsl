@@ -4,7 +4,7 @@
 	xmlns:c="http://www.w3.org/ns/xproc-step" 
 	xmlns="http://www.w3.org/1999/xhtml">
 	
-	<xsl:variable name="xubmit-base-url" select=" 'http://algernon.dlib.indiana.edu:8080/xubmit/rest/repository/newton/' "/>
+	<xsl:variable name="xubmit-base-url" select=" 'https://textproc.dlib.indiana.edu/xubmit/rest/repository/newton/' "/>
 
 	<xsl:template match="/c:directory">
 		<html>
