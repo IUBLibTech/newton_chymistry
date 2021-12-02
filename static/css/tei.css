@@ -47,6 +47,37 @@ span[title] {
 a.tei-ref.type-annotation::before {
 	content: "📝";
 }
+
+details.tei-ref.type-annotation {
+	display: inline;
+	text-indent: 0;
+}
+details.tei-ref.type-annotation summary {
+	display: inline-block;
+}
+details.tei-ref.type-annotation summary::before {
+	display: inline-block;
+	content: "📝";
+	margin-right: 0.25em;
+	width: 1em;
+}
+details.tei-ref.type-annotation[open] summary::before{
+	content: "✖";
+}
+details.tei-ref.type-annotation div.ref-popup {
+	text-align: left;
+	position: absolute;
+	color: black;
+	font-size: small;
+	font-weight: normal;
+	background-color: white;
+	padding: 1em;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	border-radius: 0.5em;
+}
+
 /* flag editorial interventions by wrapping in angle brackets */
 figure.tei-milestone figcaption::before,
 span.tei-gap::before,
