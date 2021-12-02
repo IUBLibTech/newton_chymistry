@@ -605,7 +605,7 @@
 		<!-- a link to an annotation -->
 		<xsl:element name="a">
 			<xsl:apply-templates mode="create-attributes" select="."/>
-			<xsl:attribute name="title" select="substring-after(@target, '#') => id() => normalize-space()"/>
+			<!-- <xsl:attribute name="title" select="substring-after(@target, '#') => id() => normalize-space()"/> -->
 			<xsl:apply-templates mode="create-content" select="."/>
 		</xsl:element>
 	</xsl:template>
