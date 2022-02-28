@@ -134,6 +134,7 @@ ul.tei-list.type-disjunctive {
 	font-size: small;
 	text-align: center;
 	line-height: 1em;
+	margin-left: -2em;
 }
 li {
 	margin-bottom: 0.25em;
