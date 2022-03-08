@@ -1346,3 +1346,45 @@ details.tei-bibl div.citation-popup {
 	border-color: black;
 	border-radius: 0.5em;
 }
+
+/* Parallel passages */
+details.tei-ab.type-parallel:hover + span.type-parallel{
+	background-color: #FFFF00;
+}
+details.tei-ab.type-parallel:hover + div.tei-p {
+	background-color: #FFFF00;
+}
+
+a.tei-ab.type-parallel::before {
+	content: "📝";
+}
+
+details.tei-ab.type-parallel {
+	display: inline;
+	text-indent: 0;
+}
+details.tei-ab.type-parallel summary {
+	display: inline-block;
+}
+details.tei-ab.type-parallel summary::before {
+	display: inline-block;
+	content: "📝";
+	margin-right: 0.25em;
+	width: 1em;
+}
+details.tei-ab.type-parallel[open] summary::before{
+	content: "✖";
+}
+details.tei-ab.type-parallel div.parallel-popup {
+	text-align: left;
+	position: absolute;
+	color: black;
+	font-size: small;
+	font-weight: normal;
+	background-color: white;
+	padding: 1em;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	border-radius: 0.5em;
+}

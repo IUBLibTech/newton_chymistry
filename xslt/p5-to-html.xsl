@@ -675,4 +675,40 @@
 		<xsl:attribute name="title" select="reg"/>
 	</xsl:template>
 	<xsl:template match="name/reg"/>
+
+	<xsl:key name="match-ab-id" match="ab[@next]" use="substring-after(@xml:id,'next-')"/>
+	<xsl:template match="ab[@type='parallel' and @xml:id and not(@next)]">
+		<xsl:element name="a">
+			<xsl:apply-templates mode="create-attributes" select="."/>
+			<xsl:for-each select="tokenize(@xml:id, '-to-')">
+				<xsl:variable name="token"><xsl:value-of select="."/></xsl:variable>
+				<xsl:if test="contains($token ,'ALCH')">
+					<xsl:element name="span">
+						<xsl:variable name="name"><xsl:value-of select="substring-before($token ,'-')"/></xsl:variable>
+						<xsl:variable name="doc"><xsl:value-of select="document(concat('../p5/', $name, '.xml'))"/></xsl:variable>
+						<xsl:variable name="page"><xsl:value-of select="substring-after($token, '-')"/></xsl:variable>
+						<xsl:attribute name="href"><xsl:value-of select="concat('/text/', $name, '/', $view, '#f', $page)"/></xsl:attribute>
+						<xsl:value-of select="document(concat('../p5/', $name, '.xml'))/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/collection"/>,
+						<xsl:value-of select="document(concat('../p5/', $name, '.xml'))/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno"/>,
+						<xsl:value-of select="$page"/>
+					</xsl:element>
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:element>
+		<xsl:element name="span">
+			<xsl:apply-templates mode="create-attributes" select="."/>
+			<xsl:apply-templates mode="create-content" select="."/>
+			<xsl:for-each select="key('match-ab-id', @xml:id)">
+				<xsl:if test="@rend='p-start' or @rend='p-full'">
+					<br/>
+					<xsl:element name="span">
+						<!-- the margin-left value corresponds to text-indent of .tei-p -->
+						<xsl:attribute name="style">margin-left: 1.5em;</xsl:attribute>
+					</xsl:element>
+				</xsl:if>
+				<xsl:apply-templates mode="create-content" select="."/>
+			</xsl:for-each>
+		</xsl:element>
+	</xsl:template>
+	<xsl:template match="ab[@type='parallel' and @xml:id and @next]"/>
 </xsl:stylesheet>
