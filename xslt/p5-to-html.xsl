@@ -318,7 +318,7 @@
 		</xsl:if>
 	</xsl:template>
 	<!-- elements rendered only in diplomatic view -->
-	<xsl:template match="choice/orig | choice/sic | surplus" priority="1">
+	<xsl:template match="choice/orig | sic | surplus" priority="1">
 		<xsl:if test="$view = 'diplomatic' ">
 			<xsl:next-match/>
 		</xsl:if>
@@ -439,15 +439,11 @@
 			<xsl:apply-templates mode="create-content" select="."/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="figDesc">
-		<xsl:element name="figcaption">
-			<xsl:apply-templates mode="create-attributes" select="."/>
-			<xsl:apply-templates mode="create-content" select="."/>
-		</xsl:element>
-	</xsl:template>
+	<xsl:template match="figDesc"/>
 	<xsl:template match="graphic">
 		<xsl:element name="img">
 			<xsl:attribute name="src" select="concat('figure/', @url)"/>
+			<xsl:attribute name="alt" select="parent::figure/figDesc"/>
 		</xsl:element>
 	</xsl:template>
 
@@ -474,7 +470,7 @@
 		<xsl:attribute name="href" select="concat('/bibliography#', $id)"/>
 		<xsl:next-match/>
 	</xsl:template>
-	<xsl:template mode="create-content" match="bibl/note"/>
+	<xsl:template match="bibl/note"/>
 
 	<!-- bibliographic citation popups -->
 	<xsl:template match="biblStruct" mode="citation-popup">

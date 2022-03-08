@@ -119,6 +119,10 @@ li {
 	text-align: right;
 	display: block;
 }
+.place-left {
+	text-align: left;
+	display: block;
+}
 .place-inline {
 	font-size: small;
 }
@@ -182,6 +186,16 @@ details div.expansion {
 	line-height: 1.5;
 	white-space: normal;
 	text-indent: 1.5em;
+}
+
+.tei-p.rend-flush {
+    text-indent: 0em
+}
+
+.tei-p.rend-flush-all {
+	margin-top: 0em;
+    margin-bottom: 0em;
+    text-indent: 0em
 }
 /*
 .tei-p:before {
@@ -373,6 +387,18 @@ TBowman
 	border-right-style: solid;
 	border-right-color: black;
 	border-right-width: 1px;
+}
+
+.rend-rule-top-side {
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 1px;
+}
+
+.rend-rule-bottom-side {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
 }
 
 /* .teidiv1 { padding: 0; }
