@@ -511,6 +511,13 @@
 	       </p>
 	</xsl:template>
 
+	<xsl:template match="hi" mode="citation-popup">
+        <xsl:element name="span">
+            <xsl:attribute name="class" select="replace(@rend,'(.+)','rend-$1')"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
 	<xsl:template mode="citation-popup" match="imprint">
 		<xsl:value-of select="
 			concat(
@@ -605,7 +612,6 @@
 		<!-- a link to an annotation -->
 		<xsl:element name="a">
 			<xsl:apply-templates mode="create-attributes" select="."/>
-			<xsl:attribute name="title" select="substring-after(@target, '#') => id() => normalize-space()"/>
 			<xsl:apply-templates mode="create-content" select="."/>
 		</xsl:element>
 	</xsl:template>
@@ -650,6 +656,20 @@
 			<xsl:apply-templates mode="create-attributes" select="."/>
 			<xsl:attribute name="title" select="normalize-space()"/>
 		</span>
+	</xsl:template>
+	<xsl:template match="note[@place]">
+		‡ &lt;in
+		<xsl:choose>
+			<xsl:when test="@place='left'">
+				left
+			</xsl:when>
+			<xsl:when test="@place='right'">
+				right
+			</xsl:when>
+		</xsl:choose>
+		mg:&gt;
+		<xsl:apply-templates mode="create-content" select="."/>
+		‡
 	</xsl:template>
 	<xsl:template match="name[reg]" mode="create-attributes">
 		<xsl:attribute name="title" select="reg"/>

@@ -18,4 +18,18 @@
 		</xsl:element>
 		<xsl:apply-templates/>
 	</xsl:template>
+	<xsl:key name="corresponding-note" match="div[@class='tei-note type-annotation']" use="@id" />
+	<xsl:template match="a[@class='tei-ref type-annotation']">
+		<xsl:element name="details">
+			<xsl:attribute name="id" select="@id"/>
+			<xsl:copy-of select="@class"/>
+			<xsl:element name="summary"></xsl:element>
+			<div class="ref-popup">
+				<xsl:for-each select="key('corresponding-note', substring-after(@href,'#'))">
+					<xsl:copy-of select="node()[not(self::header)]" />
+    			</xsl:for-each>
+			</div>
+		</xsl:element>
+		<xsl:apply-templates/>
+	</xsl:template>
 </xsl:stylesheet>
