@@ -32,7 +32,7 @@
 		</xsl:element>
 		<xsl:apply-templates/>
 	</xsl:template>
-	<xsl:template match="a[contains(@class, 'tei-ab')]">
+	<xsl:template match="a[contains(@class, 'tei-seg')]">
 		<xsl:element name="details">
 			<xsl:copy-of select="@class"/>
 			<xsl:element name="summary"></xsl:element>
