@@ -676,7 +676,7 @@
 	</xsl:template>
 	<xsl:template match="name/reg"/>
 
-	<xsl:key name="match-seg-id" match="seg[@next]" use="substring-after(@xml:id,'next-')"/>
+	<xsl:key name="match-seg-id" match="seg[@next]" use="substring(@xml:id,9)"/>
 	<xsl:template match="seg[@type='parallel' and @xml:id and not(@next)]">
 		<xsl:element name="a">
 			<xsl:apply-templates mode="create-attributes" select="."/>
