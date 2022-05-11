@@ -32,4 +32,22 @@
 		</xsl:element>
 		<xsl:apply-templates/>
 	</xsl:template>
+	<xsl:template match="a[contains(@class, 'tei-seg')]">
+		<xsl:element name="details">
+			<xsl:copy-of select="@class"/>
+			<xsl:element name="summary"></xsl:element>
+			<div class="parallel-popup">
+				See<br/>
+				<xsl:for-each select="span[@href]">
+					<xsl:element name="a">
+						<xsl:attribute name="href"><xsl:value-of select="@href"/></xsl:attribute>
+						<xsl:attribute name="target">_blank</xsl:attribute>
+						<xsl:value-of select="."/>
+						<br/>
+					</xsl:element>
+				</xsl:for-each>
+				for corresponding passage(s)
+			</div>
+		</xsl:element>
+	</xsl:template>
 </xsl:stylesheet>
