@@ -89,6 +89,10 @@
 						)"/>
 					</div>
 					<div>
+						<h2 class="inline">Sotheby Lot No.:</h2>
+						<xsl:apply-templates select="$msIdentifier/altIdentifier/idno[@type='sotheby_lot']" />
+					</div>
+					<div>
 						<h2 class="inline">Electronic Publication:</h2>
 						<xsl:value-of select="concat(
 							$msIdentifier/altIdentifier/idno[@type='collection'],
