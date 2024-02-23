@@ -20,7 +20,7 @@ body {
 }
 a {
 	color: #78130B;
-	text-decoration: none;
+	text-decoration:underline;
 }
 a:hover {
 	text-decoration: underline !important;
@@ -67,7 +67,7 @@ img#iu-logo {
 	display: block;
 	margin-right: 5em;
 }
-header.page-header section.chymistry {	
+header.page-header section.chymistry {
 	background-color: #DFD9BD;
 	padding-top: 0.1em;
 	padding-bottom: 0.1em;
@@ -122,7 +122,7 @@ details.keyboard div section ul {
 	grid-template-columns: repeat(8, 1fr);
 	justify-items: center;
 }
-input {	
+input {
 	font-family: "Newton Sans";
 }
 button.key {
@@ -249,7 +249,7 @@ div.tei-view-selection {
 	display: flex;
 	font-size: small;
 	margin-top: 1em;
-	justify-content: center; 
+	justify-content: center;
 }
 div.tei-view-selection a,
 div.tei-view-selection span {
@@ -271,7 +271,7 @@ div.tei-view-selection span {
 	font-weight: bold;
 }
 footer.page-footer {
-	background-color: rgb(188, 171, 129);
+	background-color: #DFD9BD;
 }
 footer.page-footer div.link-to-top {
 	padding-top: 0.25rem;

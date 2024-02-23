@@ -19,7 +19,7 @@
 	<xsl:variable name="embedded-manifest-uri" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier/idno[@type='iiif-manifest']"/>
 
 	<xsl:template match="/tei:TEI">
-		<html>
+		<html lang="en">
 			<head>
 				<title><xsl:value-of select="$title"/></title>
 				<link href="/css/tei.css" rel="stylesheet" type="text/css"/>

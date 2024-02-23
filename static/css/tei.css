@@ -42,7 +42,7 @@ span[title] {
 	cursor: help;
 }
 .hand {
-	color: #018B84;
+	color: #007F79;
 }
 a.tei-ref.type-annotation::before {
 	content: "📝";
@@ -103,10 +103,10 @@ span.tei-gap {
 }
 .tei-supplied,
 .tei-unclear {
-	color: #018B84;
+	color: #007F79;
 }
 .tei-sic::after {
-	color: #018B84;
+	color: #007F79;
 	content: " <sic> ";
 }
 del {
@@ -177,7 +177,7 @@ div.tei-teiHeader {
 	font-style: italic;
 }
 a.tei-note.type-translation::before {
-	color: #018B84;
+	color: #007F79;
 	content: "<Translation>";
 	font-style: italic;
 }
@@ -195,14 +195,14 @@ details.tei-note.type-translation summary {
 	display: inline;
 }
 details.tei-note.type-translation summary::before {
-	color: #018B84;
+	color: #007F79;
 	display: inline;
 	content: "<Translation>📝";
 	margin-right: 0.25em;
 	width: 1em;
 }
 details.tei-note.type-translation[open] summary::before{
-	color: #018B84;
+	color: #007F79;
 	content: "<Translation>✖";
 }
 

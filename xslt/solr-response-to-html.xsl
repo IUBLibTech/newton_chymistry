@@ -1,5 +1,5 @@
 <?xml version="1.1"?>
-<xsl:stylesheet version="3.0" 
+<xsl:stylesheet version="3.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:f="http://www.w3.org/2005/xpath-functions"
 	xmlns:c="http://www.w3.org/ns/xproc-step"
@@ -8,15 +8,15 @@
 	xmlns:dashboard="local-functions"
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="c f dashboard map xs">
-	
+
 	<xsl:import href="render-metadata.xsl"/>
 	<xsl:param name="default-results-limit" required="true"/>
-	
+
 	<!-- the parameters from the request URL  -->
 	<xsl:variable name="request" select="/*/c:param-set"/>
-	
+
 	<xsl:variable name="keyboard" select="document('../keyboard.xhtml')"/>
-	
+
 	<!-- the specification of the searchable fields and facets; previously used to convert the above request parameters into a Solr search -->
 	<xsl:variable name="field-definitions" select="/*/fields/field[@label]"/>
 	<xsl:variable name="facet-definitions" select="$field-definitions[@type='facet']"/>
@@ -35,10 +35,10 @@
 							/f:map
 								/f:number[@key='count'] != '0'
 					]
-	"/>	
-	
+	"/>
+
 	<xsl:variable name="search-base-url" select=" '/search/' "/>
-	
+
 	<xsl:template match="/">
 		<html>
 			<head>
@@ -55,9 +55,9 @@
 						<xsl:variable name="url-parameters" select="
 							string-join(
 								(
-									for $parameter 
+									for $parameter
 									in $request/c:param
-										[@name=$facet-definitions/@name] 
+										[@name=$facet-definitions/@name]
 										[normalize-space(@value)]
 									return concat(
 										encode-for-uri($parameter/@name), '=', encode-for-uri($parameter/@value)
@@ -71,7 +71,7 @@
 								(
 									$search-base-url,
 									$url-parameters[normalize-space()]
-								), 
+								),
 								'?'
 							)
 						}">
@@ -91,12 +91,12 @@
 			</body>
 		</html>
 	</xsl:template>
-	
+
 	<xsl:template name="render-pagination-links">
 		<xsl:variable name="current-page" select="
 			xs:integer(
 				(
-					$request/c:param[@name='page']/@value, 
+					$request/c:param[@name='page']/@value,
 					1
 				)[1]
 			)
@@ -109,12 +109,12 @@
 		<xsl:variable name="search-field-url-parameters" select="
 			string-join(
 				(
-					for $parameter 
+					for $parameter
 					in $request/c:param
 						[normalize-space(@value)]
 					return concat(
 						encode-for-uri($parameter/@name), '=', encode-for-uri($parameter/@value)
-					)											
+					)
 				),
 				'&amp;'
 			)
@@ -151,89 +151,91 @@
 							)
 						}"><xsl:value-of select="."/></a>
 					</xsl:for-each>
-				</xsl:if>			
+				</xsl:if>
 			</nav>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template name="render-results">
 		<xsl:variable name="highlighting" select="$response/f:map/f:map[@key='highlighting']/f:map"/>
 		<h2><xsl:value-of select="$response/f:map/f:map[@key='response']/f:number[@key='numFound']"/> results</h2>
 		<xsl:call-template name="render-pagination-links"/>
-		<ul class="results">
-			<xsl:for-each select="$response/f:map/f:map[@key='response']/f:array[@key='docs']/f:map">
-				<xsl:variable name="id" select="f:string[@key='id']"/>
-				<xsl:variable name="title" select="*[@key='title']"/>
-				<li class="result">
-					<xsl:call-template name="render-document-header">
-						<xsl:with-param name="title" select="$title"/>
-						<xsl:with-param name="has-introduction" select="f:array[@key='introduction']"/>
-						<xsl:with-param name="base-uri" select="concat('/text/', $id, '/')"/>
-					</xsl:call-template>
-					<!-- The Solr record contains a summary of the metadata pre-rendered as an HTML summary widget -->
-					<xsl:sequence select="parse-xml(f:string[@key='metadata-summary'])"/>
-					<xsl:variable name="matching-views" select="$highlighting[@key=$id]/f:array"/>
-					<xsl:if test="exists($matching-views)">
-						<!-- contains the views ('introduction', 'normalized', or 'diplomatic') which match the query -->
-						<!-- NB the user doesn't necessarily have to submit a text query; their search my be just a selection of facet values. -->
-						<!-- In this case, this div will not appear -->
-						<div class="matching-views">
-							<ul class="matching-views">
-								<xsl:for-each select="$matching-views">
-									<!-- sort the views; first the "introduction" view, then the "normalized", then "diplomatic" -->
-									<xsl:sort select="@key!='introduction'"/>
-									<xsl:sort select="@key!='normalized'"/>
-									<xsl:sort select="@key!='diplomatic'"/>
-									<li class="matching-view">
-										<xsl:variable name="matching-view" select="@key"/>
-										<xsl:variable name="view-heading" select="
-											map{
-												'diplomatic': 'Matches in Diplomatic Transcription',
-												'normalized': 'Matches in Normalized Transcription',
-												'introduction': 'Matches in Introduction'
-											}
-										"/>
-										<div class="matching-view">
-											<header><xsl:value-of select="$view-heading($matching-view)"/></header>
-											<!-- list the snippets of matching text which were found in this particular view -->
-											<ul class="matching-snippets">
-												<xsl:for-each select="f:string">
-													<li class="matching-snippet">
-														<a href="/text/{$id}/{$matching-view}?highlight={$request/c:param[@name='text']/@value}#hit{position()}">
-															<!-- Within each snippet, Solr marks up individual matching words with escaped(!) <em> tags -->
-															<xsl:variable name="match-escaped-em-elements">(&lt;em&gt;[^&lt;]+&lt;/em&gt;)</xsl:variable>
-															<xsl:analyze-string select="." regex="{$match-escaped-em-elements}">
-																<xsl:matching-substring>
-																	<!-- mark up the matched words -->
-																	<xsl:element name="mark">
-																		<xsl:value-of select="
-																			substring-before(
-																				substring-after(., '&lt;em&gt;'),
-																				'&lt;/em&gt;'
-																			)
-																		"/>
-																	</xsl:element>
-																</xsl:matching-substring>
-																<xsl:non-matching-substring>
-																	<xsl:value-of select="."/>
-																</xsl:non-matching-substring>
-															</xsl:analyze-string>
-														</a>
-													</li>
-												</xsl:for-each>
-											</ul>
-										</div>
-									</li>
-								</xsl:for-each>
-							</ul>
-						</div>
-					</xsl:if>
-				</li>
-			</xsl:for-each>
-		</ul>
+		<xsl:if test="$response/f:map/f:map[@key='response']/f:number[@key='numFound']!=0">
+			<ul class="results">
+				<xsl:for-each select="$response/f:map/f:map[@key='response']/f:array[@key='docs']/f:map">
+					<xsl:variable name="id" select="f:string[@key='id']"/>
+					<xsl:variable name="title" select="*[@key='title']"/>
+					<li class="result">
+						<xsl:call-template name="render-document-header">
+							<xsl:with-param name="title" select="$title"/>
+							<xsl:with-param name="has-introduction" select="f:array[@key='introduction']"/>
+							<xsl:with-param name="base-uri" select="concat('/text/', $id, '/')"/>
+						</xsl:call-template>
+						<!-- The Solr record contains a summary of the metadata pre-rendered as an HTML summary widget -->
+						<xsl:sequence select="parse-xml(f:string[@key='metadata-summary'])"/>
+						<xsl:variable name="matching-views" select="$highlighting[@key=$id]/f:array"/>
+						<xsl:if test="exists($matching-views)">
+							<!-- contains the views ('introduction', 'normalized', or 'diplomatic') which match the query -->
+							<!-- NB the user doesn't necessarily have to submit a text query; their search my be just a selection of facet values. -->
+							<!-- In this case, this div will not appear -->
+							<div class="matching-views">
+								<ul class="matching-views">
+									<xsl:for-each select="$matching-views">
+										<!-- sort the views; first the "introduction" view, then the "normalized", then "diplomatic" -->
+										<xsl:sort select="@key!='introduction'"/>
+										<xsl:sort select="@key!='normalized'"/>
+										<xsl:sort select="@key!='diplomatic'"/>
+										<li class="matching-view">
+											<xsl:variable name="matching-view" select="@key"/>
+											<xsl:variable name="view-heading" select="
+												map{
+													'diplomatic': 'Matches in Diplomatic Transcription',
+													'normalized': 'Matches in Normalized Transcription',
+													'introduction': 'Matches in Introduction'
+												}
+											"/>
+											<div class="matching-view">
+												<header><xsl:value-of select="$view-heading($matching-view)"/></header>
+												<!-- list the snippets of matching text which were found in this particular view -->
+												<ul class="matching-snippets">
+													<xsl:for-each select="f:string">
+														<li class="matching-snippet">
+															<a href="/text/{$id}/{$matching-view}?highlight={$request/c:param[@name='text']/@value}#hit{position()}">
+																<!-- Within each snippet, Solr marks up individual matching words with escaped(!) <em> tags -->
+																<xsl:variable name="match-escaped-em-elements">(&lt;em&gt;[^&lt;]+&lt;/em&gt;)</xsl:variable>
+																<xsl:analyze-string select="." regex="{$match-escaped-em-elements}">
+																	<xsl:matching-substring>
+																		<!-- mark up the matched words -->
+																		<xsl:element name="mark">
+																			<xsl:value-of select="
+																				substring-before(
+																					substring-after(., '&lt;em&gt;'),
+																					'&lt;/em&gt;'
+																				)
+																			"/>
+																		</xsl:element>
+																	</xsl:matching-substring>
+																	<xsl:non-matching-substring>
+																		<xsl:value-of select="."/>
+																	</xsl:non-matching-substring>
+																</xsl:analyze-string>
+															</a>
+														</li>
+													</xsl:for-each>
+												</ul>
+											</div>
+										</li>
+									</xsl:for-each>
+								</ul>
+							</div>
+						</xsl:if>
+					</li>
+				</xsl:for-each>
+			</ul>
+		</xsl:if>
 		<xsl:call-template name="render-pagination-links"/>
 	</xsl:template>
-	
+
 	<xsl:template name="render-field">
 		<xsl:param name="name"/>
 		<xsl:param name="label"/>
@@ -241,7 +243,7 @@
 		<label for="{$name}"><xsl:value-of select="$label"/></label>
 		<input type="text" id="{$name}" name="{$name}" value="{$field-value-sought}"/>
 	</xsl:template>
-	
+
 	<xsl:template name="render-search-fields">
 		<xsl:call-template name="render-field">
 			<xsl:with-param name="name" select=" 'text' "/>
@@ -262,7 +264,7 @@
 						<div class="field">
 							<label for="{$field-name}"><xsl:value-of select="$field-label"/></label>
 							<select id="{$field-name}" name="{$field-name}">
-								<option value="">				
+								<option value="">
 									<xsl:text>(any)</xsl:text>
 								</option>
 								<xsl:for-each select="
@@ -296,7 +298,7 @@
 		<button>search</button>
 		<xsl:copy-of select="$keyboard"/>
 	</xsl:template>
-	
+
 	<xsl:template name="render-facets">
 		<!-- render each Solr facet as a list of buckets, in which each bucket within a facet is rendered as a link to a search which constrains the facet to that bucket -->
 		<xsl:for-each select="$solr-facets">
@@ -330,14 +332,14 @@
 											$search-base-url, '?',
 											string-join(
 												(
-													for $parameter 
+													for $parameter
 													in $request/c:param
 														[normalize-space(@value)]
-														[@name=$facet-definitions/@name] 
-														[not(@name=$facet/@name and @value=$value)] 
+														[@name=$facet-definitions/@name]
+														[not(@name=$facet/@name and @value=$value)]
 													return concat(
 														encode-for-uri($parameter/@name), '=', encode-for-uri($parameter/@value)
-													)											
+													)
 												),
 												'&amp;'
 											)
@@ -357,7 +359,7 @@
 			</xsl:if>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<!-- format a Solr field value for display -->
 	<xsl:function name="dashboard:display-value">
 		<xsl:param name="value"/>
@@ -365,13 +367,13 @@
 		<xsl:choose>
 			<xsl:when test="$format='month'">
 				<xsl:value-of select="format-dateTime(
-					xs:dateTime($value), 
+					xs:dateTime($value),
 					'[MNn] [Y]', 'en', (), ()
 				)"/>
 			</xsl:when>
 			<xsl:when test="$format='day'">
 				<xsl:value-of select="format-dateTime(
-					xs:dateTime($value), 
+					xs:dateTime($value),
 					'[D] [MNn] [Y]', 'en', (), ()
 				)"/>
 			</xsl:when>
