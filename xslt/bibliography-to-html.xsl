@@ -1,13 +1,13 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
-	xmlns:c="http://www.w3.org/ns/xproc-step" 
+	xmlns:c="http://www.w3.org/ns/xproc-step"
 	xmlns:tei="http://www.tei-c.org/ns/1.0"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xpath-default-namespace="http://www.tei-c.org/ns/1.0"
 	expand-text="yes">
 	<!-- transform a TEI bibliography into an HTML page-->
-	
+
 	<xsl:template match="/">
-		<html>
+		<html lang="en">
 			<head>
 				<title>Bibliography</title>
 				<link href="/css/tei.css" rel="stylesheet" type="text/css"/>
@@ -91,7 +91,7 @@
 			</body>
 		</html>
 	</xsl:template>
-	
+
 	<xsl:template match="hi">
 		<xsl:element name="span">
 			<xsl:attribute name="class" select=" replace(@rendition,'#', 'rendition-') "/>

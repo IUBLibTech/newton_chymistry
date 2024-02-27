@@ -99,7 +99,7 @@ span.tei-gap {
 	font-style: italic;
 }
 span.tei-gap {
-	color: rgb(1, 139, 132);
+	color: #007F79;
 }
 .tei-supplied,
 .tei-unclear {
@@ -110,7 +110,7 @@ span.tei-gap {
 	content: " <sic> ";
 }
 del {
-	color: #A0A0A0;
+	color: #707070;
 }
 ins {
 	text-decoration: none;
@@ -578,7 +578,7 @@ TBowman
 
 .rend-strike {
 	text-decoration: line-through;
-	color: #A0A0A0;
+	color: #707070;
 }
 .tei-space {
 	white-space: break-spaces;
@@ -1321,7 +1321,7 @@ td.label {
 }
 
 .rendition-red {
-    color: red;
+    color: #e40101;
 }
 .rendition-blackletter {
     font-family: Old English Five;

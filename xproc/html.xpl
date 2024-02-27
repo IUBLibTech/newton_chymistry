@@ -26,7 +26,7 @@
 						<p:inline>
 							<c:response status="404">
 								<c:body content-type="application/xhtml+xml">
-									<html xmlns="http://www.w3.org/1999/xhtml">
+									<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 										<head>
 											<title>Not Found</title>
 										</head>

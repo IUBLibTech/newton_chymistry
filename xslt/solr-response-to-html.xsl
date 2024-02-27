@@ -40,7 +40,7 @@
 	<xsl:variable name="search-base-url" select=" '/search/' "/>
 
 	<xsl:template match="/">
-		<html>
+		<html lang="en">
 			<head>
 				<title>Search</title>
 				<link rel="shortcut icon" href="http://webapp1.dlib.indiana.edu/newton/favicon.ico" type="image/x-icon" />
