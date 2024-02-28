@@ -176,10 +176,49 @@ div.tei-teiHeader {
 .tei-note.type-editorial {
 	font-style: italic;
 }
-.tei-note.type-translation::before {
+a.tei-note.type-translation::before {
 	color: #018B84;
 	content: "<Translation>";
 	font-style: italic;
+}
+
+/* note-translation */
+/*a.tei-seg.type-parallel::before {
+	content: "📝";
+}*/
+
+details.tei-note.type-translation {
+	display: inline;
+	text-indent: 0;
+}
+details.tei-note.type-translation summary {
+	display: inline;
+}
+details.tei-note.type-translation summary::before {
+	color: #018B84;
+	display: inline;
+	content: "<Translation>📝";
+	margin-right: 0.25em;
+	width: 1em;
+}
+details.tei-note.type-translation[open] summary::before{
+	color: #018B84;
+	content: "<Translation>✖";
+}
+
+details.tei-note.type-translation div.translation-popup {
+	width: 30%;
+	text-align: left;
+	position: absolute;
+	color: black;
+	font-size: small;
+	font-weight: normal;
+	background-color: white;
+	padding: 1em;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	border-radius: 0.5em;
 }
 
 .inline {
@@ -1348,13 +1387,6 @@ details.tei-bibl div.citation-popup {
 }
 
 /* Parallel passages */
-details.tei-seg.type-parallel:hover + span.type-parallel{
-	background-color: #FFFF00;
-}
-details.tei-seg.type-parallel:hover + div.tei-p {
-	background-color: #FFFF00;
-}
-
 a.tei-seg.type-parallel::before {
 	content: "📝";
 }

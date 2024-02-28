@@ -69,6 +69,10 @@
 					<!-- identifiers -->
 					<xsl:variable name="msIdentifier" select="fileDesc/sourceDesc/msDesc/msIdentifier"/>
 					<div>
+						<h2 class="inline">Sotheby Lot No.:</h2>
+						<xsl:apply-templates select="$msIdentifier/altIdentifier/idno[@type='sotheby_lot']" />
+					</div>
+					<div>
 						<h2 class="inline">Physical Location:</h2>
 						<xsl:value-of select="string-join(
 							(
@@ -478,6 +482,7 @@
 				<xsl:apply-templates mode="citation-popup" select="monogr/author[*]"/>
 				<xsl:apply-templates mode="citation-popup" select="monogr/title[@type='short']"/>
 				<xsl:apply-templates mode="citation-popup" select="monogr/imprint"/>
+				<xsl:apply-templates mode="citation-popup" select="monogr/respStmt"/>
 			</p>
 			<p>
 				<a href="/bibliography#{@xml:id}">[View Full Citation]</a>
@@ -525,7 +530,7 @@
 					(publisher, date),
 					', '
 				),
-				'.'
+				'. '
 			)
 		"/>
 	</xsl:template>
@@ -537,6 +542,11 @@
 	<xsl:template match="author" mode="citation-popup">
 		<xsl:value-of select="string-join((surname, forename), ', ')"/>
 		<xsl:value-of select="name"/>
+		<xsl:text>. </xsl:text>
+	</xsl:template>
+
+	<xsl:template match="respStmt" mode="citation-popup">
+		<xsl:value-of select="string-join((orgName, note[@type='shelfmark']), ', ')"/>
 		<xsl:text>. </xsl:text>
 	</xsl:template>
 
@@ -635,6 +645,18 @@
 			</xsl:when>
 		</xsl:choose>
 	</xsl:function>
+
+	<xsl:template match="note[@rend='diplomatic']|seg[@rend='diplomatic']">
+		<xsl:if test="$view = 'diplomatic' ">
+			<xsl:next-match/>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="note[@rend='normalized']|seg[@rend='diplomatic']">
+		<xsl:if test="$view = 'normalized' ">
+			<xsl:next-match/>
+		</xsl:if>
+	</xsl:template>
+
 	<xsl:key name="reference-by-target" match="*[@target]" use="@target"/>
 	<!--<xsl:template match="note[@type='annotation'][@xml:id]" mode="create-content">-->
 	<xsl:template match="note[@xml:id]" mode="create-content">
@@ -652,10 +674,16 @@
 		<xsl:next-match/>
 	</xsl:template>
 	<xsl:template match="note[@type='translation']">
-		<span>
+		<!-- <span>
 			<xsl:apply-templates mode="create-attributes" select="."/>
 			<xsl:attribute name="title" select="normalize-space()"/>
-		</span>
+		</span> -->
+		<xsl:element name="a">
+			<xsl:apply-templates mode="create-attributes" select="."/>
+			<xsl:attribute name="title">
+				<xsl:apply-templates mode="create-content" select="serialize(.)"/>
+			</xsl:attribute>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="note[@place]">
 		‡ &lt;in
@@ -679,6 +707,7 @@
 	<xsl:key name="match-seg-id" match="seg[@next]" use="substring(@xml:id,9)"/>
 	<xsl:template match="seg[@type='parallel' and @xml:id and not(@next)]">
 		<xsl:element name="a">
+			<xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
 			<xsl:apply-templates mode="create-attributes" select="."/>
 			<xsl:for-each select="tokenize(@xml:id, '-to-')">
 				<xsl:variable name="token"><xsl:value-of select="."/></xsl:variable>
@@ -698,17 +727,12 @@
 		<xsl:element name="span">
 			<xsl:apply-templates mode="create-attributes" select="."/>
 			<xsl:apply-templates mode="create-content" select="."/>
-			<xsl:for-each select="key('match-seg-id', @xml:id)">
-				<xsl:if test="@rend='p-start' or @rend='p-full'">
-					<br/>
-					<xsl:element name="span">
-						<!-- the margin-left value corresponds to text-indent of .tei-p -->
-						<xsl:attribute name="style">margin-left: 1.5em;</xsl:attribute>
-					</xsl:element>
-				</xsl:if>
-				<xsl:apply-templates mode="create-content" select="."/>
-			</xsl:for-each>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="seg[@type='parallel' and @xml:id and @next]"/>
+	<xsl:template match="seg[@type='parallel' and @xml:id and @next]">
+		<xsl:element name="span">
+			<xsl:apply-templates mode="create-attributes" select="."/>
+			<xsl:apply-templates mode="create-content" select="."/>
+		</xsl:element>
+	</xsl:template>
 </xsl:stylesheet>

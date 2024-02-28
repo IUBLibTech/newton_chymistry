@@ -73,6 +73,7 @@
 			</xsl:choose>
 			<xsl:call-template name="footer"/>
 			<script src="/js/global.js"></script>
+			<script src="/js/dynamic-style.js"></script>
 		</xsl:copy>
 	</xsl:template>
 	

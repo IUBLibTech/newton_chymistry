@@ -35,7 +35,7 @@
 	<xsl:template match="a[contains(@class, 'tei-seg')]">
 		<xsl:element name="details">
 			<xsl:copy-of select="@class"/>
-			<xsl:element name="summary"></xsl:element>
+			<xsl:element name="summary"><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute></xsl:element>
 			<div class="parallel-popup">
 				See<br/>
 				<xsl:for-each select="span[@href]">
@@ -49,5 +49,15 @@
 				for corresponding passage(s)
 			</div>
 		</xsl:element>
+	</xsl:template>
+	<xsl:template match="a[@class='tei-note type-translation'][@title]">
+		<xsl:element name="details">
+			<xsl:copy-of select="@class"/>
+			<xsl:element name="summary"></xsl:element>
+			<div class="translation-popup">
+				<xsl:sequence select="parse-xml-fragment(@title)"/>
+			</div>
+		</xsl:element>
+		<xsl:apply-templates/>
 	</xsl:template>
 </xsl:stylesheet>

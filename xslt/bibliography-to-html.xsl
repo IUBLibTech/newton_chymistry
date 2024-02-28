@@ -30,6 +30,7 @@
 							<xsl:variable name="publication-place" select="imprint/pubPlace"/>
 							<xsl:variable name="publication-year" select="imprint/date"/>
 							<xsl:variable name="full-text-link" select="title/@ref"/>
+							<xsl:variable name="ms-repository" select="respStmt"/>
 
 							<li id="{parent::biblStruct/@xml:id}">
 								<!-- TODO format the bibliographic citation appropriately -->
@@ -70,6 +71,14 @@
 								<xsl:if test="$publication-year">
 									<h2>Publication Year:</h2>
 									<p>{$publication-year}</p>
+								</xsl:if>
+								<xsl:if test="$ms-repository/orgName">
+									<h2>Holding Institution:</h2>
+									<p>{$ms-repository/orgName}</p>
+								</xsl:if>
+								<xsl:if test="$ms-repository/note[@type='shelfmark']">
+									<h2>Shelfmark:</h2>
+									<p>{$ms-repository/note[@type='shelfmark']}</p>
 								</xsl:if>
 								<xsl:if test="$full-text-link">
 									<h2>Link to Fulltext:</h2>
