@@ -498,7 +498,7 @@
 	           Citation certainty:
                  <xsl:choose>
 				    <xsl:when test="@corresp and @cert = 'high'">
-				      Likelihood
+				      High Likelihood
 				    </xsl:when>
 				    <xsl:when test="@corresp and @cert = 'unknown'">
                       Unknown Likelihood

@@ -127,10 +127,7 @@
 					<xsl:for-each select="1 to $current-page - 1">
 						<a class="page" href="{
 							string-join(
-								(
-									concat($search-base-url, '?page=', .),
-									$search-field-url-parameters
-								),
+								concat($search-base-url, '?page=', .),
 								'&amp;'
 							)
 						}"><xsl:value-of select="."/></a>
@@ -143,10 +140,7 @@
 						<xsl:text> </xsl:text>
 						<a class="page" href="{
 							string-join(
-								(
-									concat($search-base-url, '?page=', .),
-									$search-field-url-parameters
-								),
+								concat($search-base-url, '?page=', .),
 								'&amp;'
 							)
 						}"><xsl:value-of select="."/></a>
