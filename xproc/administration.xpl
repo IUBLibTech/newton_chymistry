@@ -16,7 +16,7 @@
 				<p:inline>
 					<c:response status="200">
 						<c:body content-type="application/xhtml+xml">
-							<html xmlns="http://www.w3.org/1999/xhtml">
+							<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 								<head>
 									<title>Chymistry admin</title>
 									<style type="text/css">
@@ -82,7 +82,7 @@
 				<p:inline>
 					<c:response status="200">
 						<c:body content-type="text/html">
-							<html xmlns="http://www.w3.org/1999/xhtml">
+							<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 								<head><title>Bibliography downloaded</title></head>
 								<body><p>Bibliography downloaded</p></body>
 							</html>

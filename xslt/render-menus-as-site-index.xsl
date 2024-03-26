@@ -1,7 +1,7 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0" 
-	xmlns:fn="http://www.w3.org/2005/xpath-functions" 
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:c="http://www.w3.org/ns/xproc-step"
-	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:map="http://www.w3.org/2005/xpath-functions/map"
 	xpath-default-namespace="http://www.w3.org/1999/xhtml">
 	<!-- render the menus as a "site-index" page -->
@@ -9,7 +9,7 @@
 	<xsl:template match="/c:request">
 		<c:response status="200">
 			<c:body content-type="text/html">
-				<html>
+				<html lang="en">
 					<head>
 						<title>Site Index</title>
 					</head>
@@ -30,7 +30,7 @@
 			</c:body>
 		</c:response>
 	</xsl:template>
-	
+
 	<xsl:template match="fn:map">
 		<ul class="site-index-menu">
 			<xsl:apply-templates/>
@@ -47,5 +47,5 @@
 			</ul>
 		</li>
 	</xsl:template>
-	
+
 </xsl:stylesheet>

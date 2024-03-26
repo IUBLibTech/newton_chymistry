@@ -42,7 +42,7 @@ span[title] {
 	cursor: help;
 }
 .hand {
-	color: #018B84;
+	color: #007F79;
 }
 a.tei-ref.type-annotation::before {
 	content: "📝";
@@ -99,18 +99,18 @@ span.tei-gap {
 	font-style: italic;
 }
 span.tei-gap {
-	color: rgb(1, 139, 132);
+	color: #007F79;
 }
 .tei-supplied,
 .tei-unclear {
-	color: #018B84;
+	color: #007F79;
 }
 .tei-sic::after {
-	color: #018B84;
+	color: #007F79;
 	content: " <sic> ";
 }
 del {
-	color: #A0A0A0;
+	color: #707070;
 }
 ins {
 	text-decoration: none;
@@ -177,7 +177,7 @@ div.tei-teiHeader {
 	font-style: italic;
 }
 a.tei-note.type-translation::before {
-	color: #018B84;
+	color: #007F79;
 	content: "<Translation>";
 	font-style: italic;
 }
@@ -195,14 +195,14 @@ details.tei-note.type-translation summary {
 	display: inline;
 }
 details.tei-note.type-translation summary::before {
-	color: #018B84;
+	color: #007F79;
 	display: inline;
 	content: "<Translation>📝";
 	margin-right: 0.25em;
 	width: 1em;
 }
 details.tei-note.type-translation[open] summary::before{
-	color: #018B84;
+	color: #007F79;
 	content: "<Translation>✖";
 }
 
@@ -578,7 +578,7 @@ TBowman
 
 .rend-strike {
 	text-decoration: line-through;
-	color: #A0A0A0;
+	color: #707070;
 }
 .tei-space {
 	white-space: break-spaces;
@@ -1321,7 +1321,7 @@ td.label {
 }
 
 .rendition-red {
-    color: red;
+    color: #e40101;
 }
 .rendition-blackletter {
     font-family: Old English Five;

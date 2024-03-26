@@ -67,7 +67,7 @@
 			<p:with-param name="response-code" select="/response/lst[@name='responseHeader']/int[@name='status']/text()"/>
 			<p:input port="template">
 				<p:inline>
-					<html xmlns="http://www.w3.org/1999/xhtml">
+					<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 						<head><title>Solr index purge</title></head>
 						<body>
 							<section class="content">
