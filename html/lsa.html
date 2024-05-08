@@ -1,29 +1,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-	<head>
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-		<title>LSA Tool</title>
 
-	</head>
-	<body>
-		<div id="app">
-
-			{{ message }}
-
+<head>
+	<title>LSA Tool</title>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vuetify@3.5.15/dist/vuetify.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet"/>
+	<link href="/css/vuetify.css" rel="stylesheet" type="text/css"/>
+	<!-- <link href="https://cdn.jsdelivr.net/npm/vuetify@3.5.16/dist/vuetify.min.css" rel="stylesheet" type="text/css"/> -->
+	<!-- The vuetify CSS had to be customized to integrate the Chymistry website.
+	The vuetify.css created locally only applies inside "vuetify-style" class-->
+</head>
+<body>
+	<div id="app">
+		<div class="vuetify-style">
+			<lsa/>
 		</div>
-
-		<script>
-			const { createApp, ref } = Vue
-
-			createApp({
-			  setup() {
-			    const message = ref('Hello vue!')
-			    return {
-			      message
-			    }
-			  }
-			}).mount('#app')
-
-
-		</script>
-	</body>
+	</div>
+	<script type="text/javascript" src="/js/lsa.js"></script>
+	<!--The js code have to be located in a separate file. Otherwise, compile error occurs.-->
+</body>
 </html>
