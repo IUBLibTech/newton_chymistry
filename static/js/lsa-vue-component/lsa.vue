@@ -79,7 +79,12 @@
             <v-row>
                 <v-col>
                     <v-card :title="steps[3]" flat>
-                        <!-- list on the left, v-chip will be used for chosen docs
+                    <v-btn @click="getDocuments" >LIST</v-btn>
+                    <div>{{documents}}</div>
+                    <!-- <div v-for="title in documents">
+                        {{title}}
+                    </div> -->
+                    <!-- list on the left, v-chip will be used for chosen docs
                         textbox for regex search -->
                     </v-card>
                 </v-col>
@@ -295,6 +300,13 @@ export default {
         this.nextDisabled = false;
       }
     },
+
+    getDocuments: function() {
+      axios
+        .get('https://alchemy.sitehost-test.iu.edu/lsa/connectiontest.php')
+        .then(response => (this.documents = response))
+    },
+
     runQuery: function () {
         //Running SQL query by sending HTTP requests.
     },
@@ -347,7 +359,7 @@ export default {
         { scope: "All w/Term Presence (Term ↔ Doc)", disabled: false },
         { scope: "Only if Term Present (Term ↔ Doc)", disabled: false },
       ],
-      documents: [],
+      documents: null,
       thresholds: [
         { value: "0.0", disabled: false },
         { value: "0.1", disabled: false },
