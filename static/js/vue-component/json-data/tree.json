@@ -1,0 +1,2612 @@
+[
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "ELF",
+        "countermarkvariation": "|E|LF|"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "ELF",
+        "countermarkvariation": "E|LF"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "ELF",
+        "countermarkvariation": "ELF"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "ELF",
+        "countermarkvariation": "7PROV/ELF → 7PROV/E|LF@L; DAG+Hatch+AJ"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV",
+        "countermark": "LF",
+        "countermarkvariation": "LF"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+AJ",
+        "countermark": "CDC",
+        "countermarkvariation": "C|D|C"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+AJ",
+        "countermark": "CDC",
+        "countermarkvariation": "C|DC|"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+AJ",
+        "countermark": "CDC",
+        "countermarkvariation": "C|DC|"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+AJ",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|*"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "7PROV",
+        "watermark": "7PROV+JJ",
+        "countermark": "IV",
+        "countermarkvariation": "IV ?"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR*"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+CR",
+        "countermarkvariation": "Crown+CR"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR D on crease"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "Crown+?",
+        "countermarkvariation": "Crown+?"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "ELF",
+        "countermarkvariation": "ELF"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "LongOLive",
+        "countermarkvariation": "LongOLive"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8",
+        "countermark": "LongOLive",
+        "countermarkvariation": "LongOLive GP"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8 CP",
+        "countermark": "LongOLive",
+        "countermarkvariation": "Long(GR)Live"
+    },
+    {
+        "largergroup": "8",
+        "watermark": "8 has a submark",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "",
+        "countermarkvariation": "*"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "?",
+        "countermarkvariation": "?"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "C H",
+        "countermarkvariation": "C H"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CHD",
+        "countermarkvariation": "CHD"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CHD",
+        "countermarkvariation": "C|HD"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CHD",
+        "countermarkvariation": "|CH|D|"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CM",
+        "countermarkvariation": "CM (too faint)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "Crown+?",
+        "countermarkvariation": "Crown+?"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CT",
+        "countermarkvariation": "C|T"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CT",
+        "countermarkvariation": "CT"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CT",
+        "countermarkvariation": "CT*"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CT",
+        "countermarkvariation": "|CT|"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "CT",
+        "countermarkvariation": "CT|HC"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "DB",
+        "countermarkvariation": "DB"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "EB",
+        "countermarkvariation": "|EB|"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "EB",
+        "countermarkvariation": "E|B"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "EB",
+        "countermarkvariation": "E|B(too faint)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "EB",
+        "countermarkvariation": "ELLISTON-O-BASKET"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "EB",
+        "countermarkvariation": "EllistonOBasket"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "GR",
+        "countermarkvariation": "GR"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "H",
+        "countermarkvariation": "H"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "H",
+        "countermarkvariation": "H (thick)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "H",
+        "countermarkvariation": "H (thin)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "H",
+        "countermarkvariation": "H (thin)?"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IB",
+        "countermarkvariation": "IB"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IB",
+        "countermarkvariation": "I|B"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IB",
+        "countermarkvariation": "I|B ?"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IB",
+        "countermarkvariation": "I|B (big)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IB",
+        "countermarkvariation": "I|B?"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "IV (small)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "I|V"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "I|V (big)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "I|V (small)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "|IV| (small)"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "IV",
+        "countermarkvariation": "DAG/IV; DAG+Hatch+AJ/TJ!!"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "TI",
+        "countermarkvariation": "|TI|"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG",
+        "countermark": "TI",
+        "countermarkvariation": "TI*"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG but diff",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG Oval",
+        "countermark": "C*",
+        "countermarkvariation": "C*"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG Oval",
+        "countermark": "CT",
+        "countermarkvariation": "C|T"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG Oval",
+        "countermark": "CT",
+        "countermarkvariation": "C|T[J?]"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG Oval",
+        "countermark": "CT",
+        "countermarkvariation": "CT"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG (very large)[?]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Cross",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Cross+Shield",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Hatch+AJ",
+        "countermark": "TJ",
+        "countermarkvariation": "TJ"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Hatch+AJ",
+        "countermark": "TJ",
+        "countermarkvariation": "DAG+Hatch+AJ/TJ; HORN+HG/LL!!"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Hatch+AJ",
+        "countermark": "TL",
+        "countermarkvariation": "TL"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Hatch+AJ",
+        "countermark": "TL",
+        "countermarkvariation": "DAG+Hatch+AJ/TJ; XX/IR?!!"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+HatchedCross",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+HatchedShield",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+HatchedShield",
+        "countermark": "DP",
+        "countermarkvariation": "DP"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+HatchedShield (big)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+HatchedShield+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Shield",
+        "countermark": "IT",
+        "countermarkvariation": "IT"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Wreath",
+        "countermark": "V P",
+        "countermarkvariation": "V P"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG+Wreath+Sword",
+        "countermark": "AR Crown",
+        "countermarkvariation": "AR Crown"
+    },
+    {
+        "largergroup": "DAG",
+        "watermark": "DAG@L",
+        "countermark": "H (thick)",
+        "countermarkvariation": "H (thick)"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD",
+        "countermark": "RDTI",
+        "countermarkvariation": "RDTI"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "*",
+        "countermarkvariation": "*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "CC(reversed)",
+        "countermarkvariation": "CC(reversed)"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "GLC",
+        "countermarkvariation": "GLC"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "GLC",
+        "countermarkvariation": "GLC*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "GLC",
+        "countermarkvariation": "|G|L|C|"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "DMD+AJ",
+        "countermark": "TJ",
+        "countermarkvariation": "TJ"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "AI*",
+        "countermarkvariation": "AI*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "CSH",
+        "countermarkvariation": "CSH"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "CSH",
+        "countermarkvariation": "CbarSH"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "CSH",
+        "countermarkvariation": "CbarSH but CM on Rgt"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "CSH",
+        "countermarkvariation": "CS[BAR]H"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "HD"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "H|D"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "H|D (big)"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "HD(big)"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "HD*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "HD",
+        "countermarkvariation": "|H|D|"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "I|A",
+        "countermarkvariation": "I|A"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL (bare,small)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL (faint)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL (large)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL (strange size)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL (very faint)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL GBB",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(80x50s)*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(bare small) MT[balls]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(bare)",
+        "countermark": "AI",
+        "countermarkvariation": "AI"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(bare)",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(bare)",
+        "countermark": "MC",
+        "countermarkvariation": "M|C"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(bare)",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(big bare)",
+        "countermark": "IA",
+        "countermarkvariation": "IA"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(D? G below)*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(narrow chains)*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL(small)*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+B+S",
+        "countermark": "8*",
+        "countermarkvariation": "8*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Crown",
+        "countermark": "*",
+        "countermarkvariation": "*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Crown HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Crown(big)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+H+C*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+HC",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield",
+        "countermark": "PM",
+        "countermarkvariation": "PM"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield",
+        "countermark": "IR or TI",
+        "countermarkvariation": "IR or TI"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield BS L",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield GTS",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield OR BLANK",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Shield(Smaller No submark)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "*",
+        "countermarkvariation": "*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "AD",
+        "countermarkvariation": "AD"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "FD",
+        "countermarkvariation": "FD"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "JD",
+        "countermarkvariation": "JD"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "JD",
+        "countermarkvariation": "JD?"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "JD",
+        "countermarkvariation": "JD or FD*"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings",
+        "countermark": "JHD",
+        "countermarkvariation": "JHD"
+    },
+    {
+        "largergroup": "DMD",
+        "watermark": "FDL+Wings+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "FLSCAP",
+        "watermark": "FLSCAP",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "FLSCAP",
+        "watermark": "FLSCAP",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "GRAPES",
+        "watermark": "GRAPES",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "GRAPES",
+        "watermark": "GRAPES+CAB",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "HONI or 8(small)",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR"
+    },
+    {
+        "largergroup": "HONI",
+        "watermark": "Hon<-all distorted",
+        "countermark": "IIR",
+        "countermarkvariation": "IIR"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "AI [does this refer to line above?]",
+        "countermarkvariation": "AI [does this refer to line above?]"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "B+IR",
+        "countermarkvariation": "B+IR"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "BDFI?",
+        "countermarkvariation": "BDFI?"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "CM?",
+        "countermarkvariation": "CM?"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IL or I",
+        "countermarkvariation": "IL or I"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IPRID",
+        "countermarkvariation": "IPRID"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IPIP",
+        "countermarkvariation": "|IPIP|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IR",
+        "countermarkvariation": "IR"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IR",
+        "countermarkvariation": "IR?"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IR",
+        "countermarkvariation": "IR*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IR",
+        "countermarkvariation": "|IR|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IR",
+        "countermarkvariation": "|IR|*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IT? All",
+        "countermarkvariation": "IT? All"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "IV",
+        "countermarkvariation": "IV or AI"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "LL*",
+        "countermarkvariation": "LL*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "LM",
+        "countermarkvariation": "LM"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "RDII",
+        "countermarkvariation": "|RD|II|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "RDTI",
+        "countermarkvariation": "|RD|TI|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "RR*",
+        "countermarkvariation": "RR*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "SB",
+        "countermarkvariation": "SB"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN",
+        "countermark": "SB",
+        "countermarkvariation": "|SB|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN (faint)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN 4 WR",
+        "countermark": "SVB",
+        "countermarkvariation": "SVB"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN HermesCross",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN OR |LM|",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN; also FLSCAP",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN(80x50)",
+        "countermark": "IR*",
+        "countermarkvariation": "IR*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN(BiggerLine)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN@L",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN/perhaps w CM",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN&XX",
+        "countermark": "AI",
+        "countermarkvariation": "AI"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+?",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cord",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cord",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cord+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cord+Crown",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cord+Crown AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Cross AW",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown",
+        "countermark": "RR",
+        "countermarkvariation": "|RR|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown+HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown+HG 1string",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown IJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown sub mark diff to read",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Crown(faint)?",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HC",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+Hermes+WR*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "LDELR",
+        "countermarkvariation": "LDELR"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "LL",
+        "countermarkvariation": "LL"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "LL",
+        "countermarkvariation": "LL*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG",
+        "countermark": "MC",
+        "countermarkvariation": "MC*"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B",
+        "countermark": "MC",
+        "countermarkvariation": "M|C"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B (warped)",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B (warped)",
+        "countermark": "MC",
+        "countermarkvariation": "M|C"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG B@L",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+HG@L",
+        "countermark": "LL",
+        "countermarkvariation": "LL"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+String",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+String",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+String AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+String I*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "HORN",
+        "watermark": "HORN+String+Crown",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "Pots",
+        "watermark": "Pots",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "AI",
+        "countermarkvariation": "AI"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "CAW",
+        "countermarkvariation": "CAW"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "CAW",
+        "countermarkvariation": "CAW*"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "CAW",
+        "countermarkvariation": "C|A|W"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "HWS",
+        "countermarkvariation": "HWS"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "HWS",
+        "countermarkvariation": "H|W|S"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "IB",
+        "countermarkvariation": "IB"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "IB",
+        "countermarkvariation": "|IB|"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "IB",
+        "countermarkvariation": "|IB|(small)"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "IV",
+        "countermarkvariation": "IV? HW"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT",
+        "countermark": "R+IB",
+        "countermarkvariation": "R+IB"
+    },
+    {
+        "largergroup": "PROPAT",
+        "watermark": "PROPAT piece",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "SWORD",
+        "watermark": "SWORD (small)",
+        "countermark": "EB*",
+        "countermarkvariation": "EB*"
+    },
+    {
+        "largergroup": "SWORD",
+        "watermark": "SWORD+Wreath",
+        "countermark": "AR+Crown",
+        "countermarkvariation": "AR+Crown"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "ABM??",
+        "countermarkvariation": "ABM??"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "AI",
+        "countermarkvariation": "AI"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "AI",
+        "countermarkvariation": "|AI|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "BA or RA*",
+        "countermarkvariation": "BA or RA*"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "II",
+        "countermarkvariation": "II"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IP R",
+        "countermarkvariation": "IP R"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IR",
+        "countermarkvariation": "IR"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IR",
+        "countermarkvariation": "IR?"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "IVP",
+        "countermarkvariation": "IVP"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "PI?",
+        "countermarkvariation": "PI?"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "PT",
+        "countermarkvariation": "PT"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "PT",
+        "countermarkvariation": "|PT|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "PT",
+        "countermarkvariation": "[PT]"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "PT",
+        "countermarkvariation": "PT*"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "RABM",
+        "countermarkvariation": "RABM"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "RABM",
+        "countermarkvariation": "|RA|BM|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "RC",
+        "countermarkvariation": "RC"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX",
+        "countermark": "RIS",
+        "countermarkvariation": "RIS"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX(very faint)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX A",
+        "countermark": "*",
+        "countermarkvariation": "*"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX AB",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX AJ@L",
+        "countermark": "NO CM?",
+        "countermarkvariation": "NO CM?"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX E B",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX F B",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX F B(very faint)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX O",
+        "countermark": "RW",
+        "countermarkvariation": "RW"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX OR |AI|",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX OR AI",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+.;",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "PT",
+        "countermarkvariation": "|PT|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "IP",
+        "countermarkvariation": "IP"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "PI?",
+        "countermarkvariation": "PI?"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "RC",
+        "countermarkvariation": "RC"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+AJ",
+        "countermark": "TP",
+        "countermarkvariation": "TP"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+E|F+B*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+F+B*",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "IV",
+        "countermarkvariation": "I|V"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "II",
+        "countermarkvariation": "II"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor",
+        "countermark": "RIS",
+        "countermarkvariation": "RIS"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+Floor A",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+H+B@L",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+HB@L",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+LVG",
+        "countermark": "?",
+        "countermarkvariation": "?"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+LVG",
+        "countermark": "?|IL|D|AR|Y",
+        "countermarkvariation": "?|IL|D|AR|Y"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+O",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+O",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+O",
+        "countermark": "IVR",
+        "countermarkvariation": "IVR"
+    },
+    {
+        "largergroup": "XX",
+        "watermark": "XX+O",
+        "countermark": "RIS",
+        "countermarkvariation": "RIS"
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[CROSS]",
+        "countermark": "EB",
+        "countermarkvariation": "EB"
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "--RO N?",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "?",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "?AVE?",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "(blank) HORN+HC",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[crossed off?]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[drawing: cross + 2_foil+hermescross]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[drawing]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[drawing]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "[Drawing] like Heawood 745, 1688. Like N->HK 1679",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Big Fiery Shield",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Cross+GBM+Hermescross",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Crown+AR",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Crown+Shield HermesCross",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Crown+XX+T+C",
+        "countermark": "AI (large)",
+        "countermarkvariation": "AI (large)"
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Drawing(DoubleCircle)[?]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Drawing(GAD+B)",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Drawing(Sword)",
+        "countermark": "E|B",
+        "countermarkvariation": "E|B"
+    },
+    {
+        "largergroup": "(Uncertain)",
+        "watermark": "Drawing[Crown+DoubleCircle?]",
+        "countermark": "",
+        "countermarkvariation": ""
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AI",
+        "countermarkvariation": "AI"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AI",
+        "countermarkvariation": "|AI|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AI",
+        "countermarkvariation": "Ai or VI*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AI",
+        "countermarkvariation": "AI*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "A IR",
+        "countermarkvariation": "A IR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AR",
+        "countermarkvariation": "A|R"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "AVE?",
+        "countermarkvariation": "AVE?"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CAMP*",
+        "countermarkvariation": "CAMP*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CAW",
+        "countermarkvariation": "CAW"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CDC",
+        "countermarkvariation": "CDC"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CDG",
+        "countermarkvariation": "C|D|G"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CDG",
+        "countermarkvariation": "C|DG|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CH|D",
+        "countermarkvariation": "CH|D"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CIP",
+        "countermarkvariation": "C|IP|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "circle B D, circle I",
+        "countermarkvariation": "\"circle B D"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CIRCLES*",
+        "countermarkvariation": "CIRCLES*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown",
+        "countermarkvariation": "Crown"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown",
+        "countermarkvariation": "CROWN*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR (too faint)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown+AR",
+        "countermarkvariation": "Crown+AR [drawing]"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "Crown+GR",
+        "countermarkvariation": "Crown+GR+Circle"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CT*",
+        "countermarkvariation": "CT*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "EB",
+        "countermarkvariation": "E|B"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "EB",
+        "countermarkvariation": "ELLISTON-O-BASKET"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "EB",
+        "countermarkvariation": "Elliston&Basket"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "EB",
+        "countermarkvariation": "EllistonOBasket"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "EB",
+        "countermarkvariation": "EllistonOBasket"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "ELF",
+        "countermarkvariation": "|ELF|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "GLC",
+        "countermarkvariation": "GLC"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "GLC",
+        "countermarkvariation": "G|LC"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "GLC",
+        "countermarkvariation": "GLC*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "H",
+        "countermarkvariation": "H"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "H",
+        "countermarkvariation": "H (thin)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "H",
+        "countermarkvariation": "H (thin)? (faint)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "H",
+        "countermarkvariation": "H'(thin)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "-HB- ?",
+        "countermarkvariation": "-HB- ?"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "HD",
+        "countermarkvariation": "HD"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "HD",
+        "countermarkvariation": "H|D"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "HD",
+        "countermarkvariation": "|H|D|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "HWS",
+        "countermarkvariation": "HWS"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "HWS",
+        "countermarkvariation": "CM: HWS"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "|I |(hole)",
+        "countermarkvariation": "|I |(hole)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "IB"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "I|B"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "I|B (big)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "IB?"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "IB*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "|I|B"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IB",
+        "countermarkvariation": "|IB|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IBR",
+        "countermarkvariation": "IB|R*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "ID",
+        "countermarkvariation": "ID"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "II",
+        "countermarkvariation": "II*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "II",
+        "countermarkvariation": "|II|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IP?IP",
+        "countermarkvariation": "|IP?IP|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IR",
+        "countermarkvariation": "IR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IR",
+        "countermarkvariation": "|IR|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IR",
+        "countermarkvariation": "|IR|*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IR",
+        "countermarkvariation": "IR*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IT",
+        "countermarkvariation": "|IT|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "IV"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "IV or VI*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "IV*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "|IV|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "|IV| (small)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "I|V (small)"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "IV",
+        "countermarkvariation": "|IV| OR |AI|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "JD or FD*",
+        "countermarkvariation": "JD or FD*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "KIS",
+        "countermarkvariation": "KIS"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LDELR",
+        "countermarkvariation": "LDELR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LL",
+        "countermarkvariation": "|LL|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LM",
+        "countermarkvariation": "LM"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LM",
+        "countermarkvariation": "|LM|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LongOLive",
+        "countermarkvariation": "LongOLive"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "LongOLive",
+        "countermarkvariation": "LongOLive?"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MC",
+        "countermarkvariation": "MC"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MC",
+        "countermarkvariation": "MC*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MC",
+        "countermarkvariation": "M|C"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MI",
+        "countermarkvariation": "|MI|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MI",
+        "countermarkvariation": "|MI|?"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "MRIR",
+        "countermarkvariation": "M|R|||IR|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "PIWS",
+        "countermarkvariation": "PIWS"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "PT",
+        "countermarkvariation": "PT"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "PT",
+        "countermarkvariation": "|PT|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "RABA",
+        "countermarkvariation": "|RA|BA|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "RDTI",
+        "countermarkvariation": "|RD|TI|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "RR",
+        "countermarkvariation": "RR"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "RR",
+        "countermarkvariation": "|RR|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "TI",
+        "countermarkvariation": "|TI|"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "TI",
+        "countermarkvariation": "TI*"
+    },
+    {
+        "largergroup": "NO Watermark",
+        "watermark": "",
+        "countermark": "CM WH or HW",
+        "countermarkvariation": "CM WH or HW"
+    }
+]

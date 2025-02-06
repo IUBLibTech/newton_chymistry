@@ -7,7 +7,8 @@
 		"Index Chemicus":"/page/index-chemicus",
 		"Latent Semantic Analysis":"/newton/lsa/index.php",
 		"Newton Font":"/page/font",
-		"Symbol Guide":"/page/symbols"
+		"Symbol Guide":"/page/symbols",
+		"Watermark Dating": "/page/shapirowatermark"
 	},
 	"Educational Resources":{
 		"Chymical Products":"/page/chymical-products",
