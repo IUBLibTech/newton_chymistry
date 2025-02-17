@@ -32,6 +32,7 @@
 						<xsl:with-param name="title" select="$title"/>
 						<xsl:with-param name="current-view" select="$view"/>
 						<xsl:with-param name="has-introduction" select="normalize-space($introduction)"/>
+						<xsl:with-param name="has-dating" select="normalize-space($dating)"/>
 					</xsl:call-template>
 					<!-- render the document metadata details -->
 					<xsl:apply-templates select="tei:teiHeader"/>
@@ -41,6 +42,9 @@
 						<xsl:choose>
 							<xsl:when test="$view = 'introduction'">
 								<xsl:apply-templates select="$introduction"/>
+							</xsl:when>
+							<xsl:when test="$view = 'dating'">
+								<xsl:apply-templates select="$dating"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:apply-templates select="tei:text"/>
@@ -53,6 +57,7 @@
 	</xsl:template>
 
 	<xsl:variable name="introduction" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/msItem/note[@type='introduction']"/>
+	<xsl:variable name="dating" select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/msItem/note[@type='dating']"/>
 
 	<xsl:template match="teiHeader">
 		<div class="tei-teiHeader">
@@ -553,20 +558,37 @@
 	<!-- lists and tables -->
 	<xsl:template match="list" priority="1">
 		<xsl:apply-templates select="tei:head"/><!-- HTML list headings must precede <ul> element -->
-		<xsl:element name="{if (@type='ordered') then 'ol' else 'ul'}">
-			<xsl:apply-templates mode="create-attributes" select="."/>
-			<!-- generate child <li> only for list/item, not e.g. list/milestone -->
-			<xsl:apply-templates select="tei:item"/>
-		</xsl:element>
+		<xsl:choose>
+			<xsl:when test="@rend='inline'">
+				<xsl:apply-templates select="tei:item"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:element name="{if (@type='ordered') then 'ol' else 'ul'}">
+					<xsl:apply-templates mode="create-attributes" select="."/>
+					<!-- generate child <li> only for list/item, not e.g. list/milestone -->
+					<xsl:apply-templates select="tei:item"/>
+				</xsl:element>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="item" priority="1">
-		<li>
-			<xsl:apply-templates mode="create-attributes" select="."/>
-			<xsl:variable name="current-item" select="."/>
-			<!-- include a rendition of the preceding non-<item>, non-<head> siblings as part of this <li> -->
-			<xsl:apply-templates select="preceding-sibling::*[not(self::tei:item | self::tei:head)][following-sibling::tei:item[1] is $current-item]"/>
-			<xsl:apply-templates mode="create-content" select="."/>
-		</li>
+		<xsl:choose>
+			<xsl:when test="..[@rend='inline']">
+				<xsl:variable name="current-item" select="."/>
+				<!-- include a rendition of the preceding non-<item>, non-<head> siblings as part of this <li> -->
+				<xsl:apply-templates select="preceding-sibling::*[not(self::tei:item | self::tei:head)][following-sibling::tei:item[1] is $current-item]"/>
+				<xsl:apply-templates mode="create-content" select="."/>
+			</xsl:when>
+			<xsl:otherwise>
+				<li>
+					<xsl:apply-templates mode="create-attributes" select="."/>
+					<xsl:variable name="current-item" select="."/>
+					<!-- include a rendition of the preceding non-<item>, non-<head> siblings as part of this <li> -->
+					<xsl:apply-templates select="preceding-sibling::*[not(self::tei:item | self::tei:head)][following-sibling::tei:item[1] is $current-item]"/>
+					<xsl:apply-templates mode="create-content" select="."/>
+				</li>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="table" priority="1">
 		<table>

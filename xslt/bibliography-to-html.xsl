@@ -51,7 +51,14 @@
 									}</cite>
 								</xsl:if>
 								<xsl:if test="$title-page">
-									<h2>Title Page:</h2>
+									<xsl:choose>
+									  <xsl:when test="parent::biblStruct/@type = 'manuscript'">
+										<h2>Full Title:</h2>
+									  </xsl:when>
+									  <xsl:otherwise>
+									    <h2>Title Page:</h2>
+									  </xsl:otherwise>
+									</xsl:choose>
 									<p><xsl:apply-templates select="$title-page"/></p>
 								</xsl:if>
 								<xsl:if test="$contributors">
