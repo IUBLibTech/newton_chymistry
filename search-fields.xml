@@ -24,6 +24,10 @@
 	This field defines an "id" field which must identify the text uniquely and persistently. It is used by Solr as a unique identifier.
 	-->
 	<field name="id" xpath="/TEI/@xml:id"/>
+	<!--
+	This field defines an "teiHeader" field which extracts selected text noded from the TEI header
+	-->
+	<field name="tei-header" xpath="/TEI/teiHeader//text()"/>
 	<!-- 
 	This field defines a "title" field containing a composite value aggregated from various components of the msIdentifier.
 	-->
