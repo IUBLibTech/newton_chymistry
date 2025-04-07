@@ -8,6 +8,7 @@
 		<xsl:param name="title"/>
 		<xsl:param name="base-uri" select=" '' "/>
 		<xsl:param name="has-introduction"/>
+		<xsl:param name="has-dating"/>
 		<xsl:param name="current-view"/>
 		<h2><xsl:value-of select="$title"/></h2>
 		<div class="tei-view-selection">
@@ -31,6 +32,14 @@
 				<xsl:with-param name="current-view" select="$current-view"/>
 				<xsl:with-param name="base-uri" select="$base-uri"/>
 			</xsl:call-template>
+			<xsl:if test="$has-dating">
+				<xsl:call-template name="render-view-option">
+					<xsl:with-param name="option-view" select=" 'dating' "/>
+					<xsl:with-param name="option-label" select=" 'Dating' "/>
+					<xsl:with-param name="current-view" select="$current-view"/>
+					<xsl:with-param name="base-uri" select="$base-uri"/>
+				</xsl:call-template>
+			</xsl:if>
 		</div>
 	</xsl:template>
 
