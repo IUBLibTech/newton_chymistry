@@ -70,10 +70,18 @@
 				<xsl:call-template name="define-field">
 					<xsl:with-param name="name" select=" 'diplomatic' "/>
 				</xsl:call-template>				
+				<xsl:call-template name="define-field">
+					<xsl:with-param name="name" select=" 'tei-header' "/>
+				</xsl:call-template>
 				<!-- define a "text" field that's a copy of "introduction", "normalized", and "diplomatic" -->
 				<xsl:call-template name="define-field">
 					<xsl:with-param name="name" select=" 'text' "/>
 				</xsl:call-template>
+				<!-- define "all" field that's a copy of everything in text and select teiHeader text nodes -->
+				<xsl:call-template name="define-field">
+					<xsl:with-param name="name" select=" 'all' "/>
+				</xsl:call-template>
+
 				<xsl:call-template name="add-copy-field">
 					<xsl:with-param name="source" select=" 'introduction' "/>
 					<xsl:with-param name="destination" select=" 'text' "/>
@@ -86,7 +94,23 @@
 					<xsl:with-param name="source" select=" 'diplomatic' "/>
 					<xsl:with-param name="destination" select=" 'text' "/>
 				</xsl:call-template>
-				
+				<xsl:call-template name="add-copy-field">
+					<xsl:with-param name="source" select=" 'introduction' "/>
+					<xsl:with-param name="destination" select=" 'all' "/>
+				</xsl:call-template>
+				<xsl:call-template name="add-copy-field">
+					<xsl:with-param name="source" select=" 'normalized' "/>
+					<xsl:with-param name="destination" select=" 'all' "/>
+				</xsl:call-template>
+				<xsl:call-template name="add-copy-field">
+					<xsl:with-param name="source" select=" 'diplomatic' "/>
+					<xsl:with-param name="destination" select=" 'all' "/>
+				</xsl:call-template>
+				<xsl:call-template name="add-copy-field">
+					<xsl:with-param name="source" select=" 'tei-header' "/>
+					<xsl:with-param name="destination" select=" 'all' "/>
+				</xsl:call-template>
+
 				<!-- define Solr fields corresponding to the facets and search fields defined in the "search-fields.xml" file -->
 				<xsl:for-each select="/*/fields/field">
 					<xsl:call-template name="define-field">
