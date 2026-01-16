@@ -48,34 +48,43 @@ a.tei-ref.type-annotation::before {
 	content: "📝";
 }
 
-details.tei-ref.type-annotation {
-	display: inline;
+span.tei-ref.type-annotation {
+	display: inline-block;
+	position: relative;
 	text-indent: 0;
 }
-details.tei-ref.type-annotation summary {
+span.tei-ref.type-annotation span.summary {
 	display: inline-block;
 }
-details.tei-ref.type-annotation summary::before {
+span.tei-ref.type-annotation span.summary::before {
 	display: inline-block;
 	content: "📝";
 	margin-right: 0.25em;
 	width: 1em;
 }
-details.tei-ref.type-annotation[open] summary::before{
+span.tei-ref.type-annotation[data-open] span.summary::before{
 	content: "✖";
 }
-details.tei-ref.type-annotation div.ref-popup {
+span.tei-ref.type-annotation div.ref-popup {
+	display: none;
 	text-align: left;
 	position: absolute;
 	color: black;
 	font-size: small;
 	font-weight: normal;
 	background-color: white;
+	min-width: 300px;
+	max-width: 400px;
 	padding: 1em;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
 	border-radius: 0.5em;
+	z-index: 2000;
+}
+
+span.tei-ref[data-open] div.ref-popup {
+	display: block;
 }
 
 /* flag editorial interventions by wrapping in angle brackets */
@@ -187,26 +196,28 @@ a.tei-note.type-translation::before {
 	content: "📝";
 }*/
 
-details.tei-note.type-translation {
-	display: inline;
+span.tei-note.type-translation {
+	display: inline-block;
+	position: relative;
 	text-indent: 0;
 }
-details.tei-note.type-translation summary {
+span.tei-note.type-translation span.summary {
 	display: inline;
 }
-details.tei-note.type-translation summary::before {
+span.tei-note.type-translation span.summary::before {
 	color: #007F79;
 	display: inline;
 	content: "<Translation>📝";
 	margin-right: 0.25em;
 	width: 1em;
 }
-details.tei-note.type-translation[open] summary::before{
+span.tei-note.type-translation[data-open] span.summary::before{
 	color: #007F79;
 	content: "<Translation>✖";
 }
 
-details.tei-note.type-translation div.translation-popup {
+span.tei-note.type-translation div.translation-popup {
+	display: none;
 	width: 30%;
 	text-align: left;
 	position: absolute;
@@ -214,11 +225,18 @@ details.tei-note.type-translation div.translation-popup {
 	font-size: small;
 	font-weight: normal;
 	background-color: white;
+	min-width: 300px;
+	max-width: 400px;
 	padding: 1em;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
 	border-radius: 0.5em;
+	z-index: 2000;
+}
+
+span.tei-note[data-open] div.translation-popup {
+	display: block;
 }
 
 .inline {
@@ -1356,67 +1374,85 @@ ul.tei-listBibl li cite
 
 
 /* bibliographic popups */
-details.tei-bibl {
-	display: inline;
+span.tei-bibl {
+	display: inline-block;
+	position: relative;
 	text-indent: 0;
 }
-details.tei-bibl summary {
+span.tei-bibl span.summary {
 	display: inline-block;
 }
-details.tei-bibl summary::before {
+span.tei-bibl span.summary::before {
 	display: inline-block;
 	content: "📖";
 	margin-right: 0.25em;
 	width: 1em;
 }
-details.tei-bibl[open] summary::before{
+span.tei-bibl[data-open] span.summary::before {
 	content: "✖";
 }
-details.tei-bibl div.citation-popup {
+span.tei-bibl div.citation-popup {
+	display: none;
 	text-align: left;
 	position: absolute;
 	color: black;
 	font-size: small;
 	font-weight: normal;
 	background-color: white;
+	min-width: 300px;
+	max-width: 400px;
 	padding: 1em;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
 	border-radius: 0.5em;
+	z-index: 2000;
+}
+
+span.tei-bibl[data-open] div.citation-popup {
+	display: block;
 }
 
 /* Parallel passages */
-a.tei-seg.type-parallel::before {
+/* a.tei-seg.type-parallel::before {
 	content: "📝";
 }
-
-details.tei-seg.type-parallel {
+ */
+span.tei-seg.type-parallel {
 	display: inline;
+	position: relative;
 	text-indent: 0;
 }
-details.tei-seg.type-parallel summary {
+span.tei-seg.type-parallel span.summary {
 	display: inline-block;
 }
-details.tei-seg.type-parallel summary::before {
+span.tei-seg.type-parallel span.summary::before {
 	display: inline-block;
 	content: "📝";
 	margin-right: 0.25em;
 	width: 1em;
 }
-details.tei-seg.type-parallel[open] summary::before{
+span.tei-seg.type-parallel[data-open] span.summary::before{
 	content: "✖";
 }
-details.tei-seg.type-parallel div.parallel-popup {
+span.tei-seg.type-parallel div.parallel-popup {
+	display: none;
 	text-align: left;
 	position: absolute;
 	color: black;
 	font-size: small;
 	font-weight: normal;
 	background-color: white;
+	min-width: 300px;
+	max-width: 400px;
 	padding: 1em;
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
 	border-radius: 0.5em;
+	z-index: 2000;
+}
+
+span.tei-seg[data-open] div.parallel-popup {
+	display: block;
 }

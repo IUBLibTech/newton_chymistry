@@ -11,19 +11,23 @@
 	</xsl:template>
 	<!-- replace a bibliographic reference hyperlink with a details/summary combination-->
 	<xsl:template match="a[@class='tei-bibl'][@title]">
-		<xsl:element name="details">
+		<xsl:element name="span">
 			<xsl:copy-of select="@class"/>
-			<xsl:element name="summary"></xsl:element>
+			<xsl:element name="span">
+				<xsl:attribute name="class">summary</xsl:attribute>
+			</xsl:element>
 			<xsl:sequence select="parse-xml-fragment(@title)"/>
 		</xsl:element>
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:key name="corresponding-note" match="div[@class='tei-note type-annotation']" use="@id" />
 	<xsl:template match="a[@class='tei-ref type-annotation']">
-		<xsl:element name="details">
+		<xsl:element name="span">
 			<xsl:attribute name="id" select="@id"/>
 			<xsl:copy-of select="@class"/>
-			<xsl:element name="summary"></xsl:element>
+			<xsl:element name="span">
+				<xsl:attribute name="class">summary</xsl:attribute>
+			</xsl:element>
 			<div class="ref-popup">
 				<xsl:for-each select="key('corresponding-note', substring-after(@href,'#'))">
 					<xsl:copy-of select="node()[not(self::header)]" />
@@ -33,9 +37,12 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="a[contains(@class, 'tei-seg')]">
-		<xsl:element name="details">
+		<xsl:element name="span">
 			<xsl:copy-of select="@class"/>
-			<xsl:element name="summary"><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute></xsl:element>
+			<xsl:element name="span">
+				<xsl:attribute name="class">summary</xsl:attribute>
+				<xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
+			</xsl:element>
 			<div class="parallel-popup">
 				See<br/>
 				<xsl:for-each select="span[@href]">
@@ -51,9 +58,11 @@
 		</xsl:element>
 	</xsl:template>
 	<xsl:template match="a[@class='tei-note type-translation'][@title]">
-		<xsl:element name="details">
+		<xsl:element name="span">
 			<xsl:copy-of select="@class"/>
-			<xsl:element name="summary"></xsl:element>
+			<xsl:element name="span">
+				<xsl:attribute name="class">summary</xsl:attribute>
+			</xsl:element>
 			<div class="translation-popup">
 				<xsl:sequence select="parse-xml-fragment(@title)"/>
 			</div>
