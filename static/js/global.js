@@ -1,46 +1,56 @@
 /*
 Attach a "toggle" listener to each popup menu, to close the other menus
 */
-var popupMenus = document.querySelectorAll("nav#main-nav ul li details");
+var popupMenus = document.querySelectorAll(
+	"nav#main-nav, ul, li, span.tei-bibl, span.tei-ref, span.tei-note, span.tei-seg,　details "
+	);
 
 for (var i=0; i < popupMenus.length; i = i + 1) {
 	popupMenus.item(i).addEventListener(
-		"toggle",
+		"click",
 		function(event) {
-			if (this.open) {
-				for (var i=0; i < popupMenus.length; i = i + 1) {
-					var menu = popupMenus.item(i);
-					if (menu !== this) {
-						menu.removeAttribute("open");
-					}
-				}
-			}
-		}
+            for (var j = 0; j < popupMenus.length; j = j + 1) {
+                popupMenus.item(j).removeAttribute("data-open");
+            }
+            this.setAttribute("data-open", "true");
+            event.stopPropagation();
+        }
 	);
 }
 
 /* mousing over a details summary should open the detail */
-var popupMenuSummaries = document.querySelectorAll("nav#main-nav ul li details");
-for (var i=0; i < popupMenuSummaries.length; i = i + 1) {
-	popupMenuSummaries.item(i).addEventListener(
-		"mouseover",
-		function(event) {
-			this.setAttribute("open", "open");
-			event.stopPropagation();
-		}
+var summaries = document.querySelectorAll(
+	"nav#main-nav, ul, li, span.tei-bibl > span.summary, span.tei-ref > span.summary, span.tei-note > span.summary, span.tei-seg > span.summary, details "
+	);
+for (var i=0; i < summaries.length; i = i + 1) {
+	summaries.item(i).addEventListener(
+        "click",
+        function(event) {
+            var menu = this.parentNode;
+            var isOpen = menu.hasAttribute("data-open");
+
+            for (var j = 0; j < popupMenus.length; j = j + 1) {
+                popupMenus.item(j).removeAttribute("data-open");
+            }
+
+            if (!isOpen) {
+                menu.setAttribute("data-open", "true");
+            }
+
+            event.stopPropagation();
+        }
 	);
 }
 
 /* mousing over any other part of the page should close the menus */
 var body = document.querySelector("body");
 body.addEventListener(
-	"mouseover",
+	"click",
 	function(event) {
-		for (var i=0; i < popupMenus.length; i = i + 1) {
-			var menu = popupMenus.item(i);
-			menu.removeAttribute("open");
-		}
-	}
+        for (var i = 0; i < popupMenus.length; i = i + 1) {
+            popupMenus.item(i).removeAttribute("data-open");
+        }
+    }
 );
 
 /* keyboard */
@@ -70,4 +80,32 @@ for (var i=0; i < inputFields.length; i = i + 1) {
 			console.log(currentInputField);
 		}
 	);
+}
+
+/* parallel passages highlighting */
+const passages = document.getElementsByClassName("type-parallel")
+
+for (const passage of passages) {
+	if (passage.classList.contains("tei-seg")) {
+		passage.addEventListener("mouseover", function(e) {
+			let idToCompare = e.target.id.slice(1)
+			for (const p of passages) {
+				if (p.tagName === "SPAN" && p.hasAttribute("id")) {
+					const id = p.getAttribute("id")
+					if (idToCompare === id.split("g")[1]) {
+						p.style.backgroundColor = "yellow"
+					}
+				}
+			}
+		}
+		)
+	}
+}
+for (const passage of passages) {
+	passage.addEventListener("mouseout", function() {
+		for (const p of passages) {
+			p.style.backgroundColor = "transparent"
+		}
+	}
+	)
 }
