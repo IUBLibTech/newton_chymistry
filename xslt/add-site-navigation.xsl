@@ -149,20 +149,20 @@
 				</div>
 				<div class="links">
 					<p>General Editor: William R. Newman, Professor of 
-					<a href="http://www.indiana.edu/~hpscdept/" title="History of Science Department" target="_blank">History of Science</a>, 
+					<a href="https://hpsc.indiana.edu/" title="Department of History and Philosophy of Science and Medicine" target="_blank">History and Philosophy of Science and Medicine</a>, 
 					<a href="http://www.iub.edu/" title="Indiana University" target="_blank">Indiana University</a><br/>
-					Technical Editor: John A. Walsh,  Assistant Professor of 
-					<a href="http://www.slis.indiana.edu/" title="School of Library and Information Science" target="_blank">Library and Information Science</a>, 
+					Technical Editor: John A. Walsh, Associate Professor of 
+					<a href="http://ils.indiana.edu/" title="Department of Information and Library Science" target="_blank">Information and Library Science</a>, 
 					<a href="http://www.iub.edu/" title="Indiana University" target="_blank">Indiana University</a><br/>
-					In collaboration with the <a href="http://www.dlib.indiana.edu" target="_blank" title="Digital Library Program at IU">IU Digital Library Program</a> 
-					| <a href="http://www.libraries.iub.edu/index.php?pageId=1137" title="Libraries Privacy Policy" target="_blank">Libraries Privacy Policy</a> 
-					| In association with <a href="http://www.newtonproject.sussex.ac.uk/" title="Newton Project at Sussex" target="_blank">The Newton Project</a> - 
-					University of Sussex<br/>
+					In collaboration with <a href="http://www.libraries.indiana.edu" target="_blank" title="Digital Library Program at IU">IU Libraries</a> 
+					| <a href="https://policies.iu.edu/policies/lib-01-libraries-privacy/index.html" title="Libraries Privacy Policy" target="_blank">Libraries Privacy Policy</a> 
+					| In association with <a href="https://www.newtonproject.ox.ac.uk/" title="Newton Project at Oxford" target="_blank">The Newton Project</a> - 
+					University of Oxford<br/>
 					<a href="/page/copyright" title="Copyright">© Copyright 2005—<xsl:value-of select="year-from-date(current-date())"/>, 
 					William R. Newman.<!--
 					 | Updated: 12/4/15 7:05 PM | URL: https://webapp1.dlib.indiana.edu:443/newton/project/publication.do
 					 --></a><br />
-					Peer reviewed by <a href="http://18thconnect.org/" target="_blank">18thConnect</a>.</p>
+					Peer reviewed by <a href="https://ar-c.org/18thconnect/" target="_blank">18thConnect</a>.</p>
 					<p>This material is based upon work supported by the <a href="http://www.nsf.gov/" title="NSF" target="_blank">National Science Foundation</a> 
 					under Grant Nos. 0324310 and 0620868 and by the <a href="http://www.neh.gov/" title="NEH" target="_blank">National Endowment for the Humanities</a> 
 					under Grant No. RZ-50798. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not 
