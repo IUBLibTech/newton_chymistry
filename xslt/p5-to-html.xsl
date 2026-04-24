@@ -125,8 +125,7 @@
 							)
 						"/>
 						<em>The Chymistry of Isaac Newton</em>
-						<xsl:text>.  Ed. </xsl:text>
-						<xsl:value-of select="titleStmt/respStmt/name[@type='editor']"/>
+						<xsl:text>. </xsl:text>
 						<xsl:text>&#160;</xsl:text>
 						<xsl:value-of select="fileDesc/publicationStmt/date"/>
 						<xsl:text>. Retrieved </xsl:text>
