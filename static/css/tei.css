@@ -792,9 +792,10 @@ hr {
 	font-size: small;
 }
 
+/* commented out because no longer using 'erased' in rend
 .rend-erased {
 	color: #cccccc;
-}
+}*/
 
 .rend-red {
 	color: red;
