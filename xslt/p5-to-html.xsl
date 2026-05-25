@@ -65,7 +65,7 @@
 			<xsl:apply-templates select="fileDesc/sourceDesc/msDesc/msContents/msItem/title" />
 			<xsl:apply-templates select="fileDesc/sourceDesc/msDesc/msContents/msItem/note[@type='description']" />
 			<details class="tei-teiHeader">
-				<summary></summary>
+				<summary aria-label="Metadata insertion point"></summary>
 				<div class="expansion">
 					<xsl:variable name="now" select="current-dateTime()"/>
 					<xsl:apply-templates select="fileDesc/sourceDesc/msDesc/physDesc/objectDesc/supportDesc" />
