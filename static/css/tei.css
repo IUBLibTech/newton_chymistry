@@ -243,7 +243,8 @@ span.tei-note[data-open] div.translation-popup {
 	display: inline;
 }
 div.tei-teiHeader details summary::after {
-	content: "more...";
+	/* content: "more..."; */
+	content: "Expand to view additional metadata...";
 	font-style: italic;
 }
 div.tei-teiHeader details[open] summary::after {
