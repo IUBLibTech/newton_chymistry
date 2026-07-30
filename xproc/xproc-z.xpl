@@ -36,6 +36,130 @@
 	<!-- The pipeline sends its HTTP response to the "result" port -->
 	<p:output port="result" primary="true" sequence="true"/>
 	
+	<p:declare-step type="chymistry:figure">
+		<p:option name="relative-uri" required="true"/>
+		<p:output port="result"/>
+		<p:template name="figure-request">
+			<p:with-param name="relative-uri" select="$relative-uri"/>
+			<p:input port="template">
+				<p:inline>
+					<c:request detailed="true" method="get" href="{
+						replace(
+						$relative-uri,
+						'^text/([^/]+)/figure/(.*)',
+						'../figure/$1/$2'
+						)
+						}"/>
+				</p:inline>
+			</p:input>
+			<p:input port="source">
+				<p:empty/>
+			</p:input>
+		</p:template>
+		<p:try>
+			<p:group>
+				<p:http-request/>
+				<p:template name="http-response">
+					<p:input port="parameters"><p:empty/></p:input>
+					<p:input port="template">
+						<p:inline>
+							<c:response status="200">
+								<c:header name="X-Powered-By" value="XProc using XML Calabash"/>
+								<c:header name="Server" value="XProc-Z"/>
+								<c:header name="Cache-Control" value="max-age=3600"/>
+								<c:body content-type="image/gif" encoding="base64">
+									{//c:body/text()}
+								</c:body>
+							</c:response>
+						</p:inline>
+					</p:input>
+				</p:template>
+			</p:group>
+			<p:catch>
+				<z:not-found/>
+			</p:catch>
+		</p:try>
+	</p:declare-step>
+	
+	<p:declare-step type="chymistry:add-site-navigation">
+		<p:input port="source"/>
+		<p:output port="result"/>
+		<p:option name="current-uri" select=" () "/>
+		<p:xslt>
+			<p:with-param name="current-uri" select="$current-uri"/>
+			<p:input port="stylesheet">
+				<p:document href="../xslt/add-site-navigation.xsl"/>
+			</p:input>
+		</p:xslt>
+		<chymistry:add-institutional-branding/>
+	</p:declare-step>	
+	
+	<p:declare-step type="chymistry:add-institutional-branding" name="add-institutional-branding">
+		<p:input port="source"/>
+		<p:output port="result"/>
+		<chymistry:insert-remote-html 
+			href="https://assets.iu.edu/brand/3.x/header-iub.html"
+			match="html:body/html:header[tokenize(@class)='page-header']" 
+			position="first-child"
+		/>
+		<chymistry:insert-remote-html 
+			href="https://assets.iu.edu/brand/3.x/footer.html"
+			match="html:body/html:footer[tokenize(@class)='page-footer']" 
+			position="last-child"
+		/>
+		<p:insert match="html:head" position="first-child">
+			<p:input port="insertion">
+				<p:inline xmlns="http://www.w3.org/1999/xhtml" exclude-inline-prefixes="chymistry">
+					<link href="https://assets.iu.edu/brand/3.x/brand.css" rel="stylesheet" type="text/css"/>
+				</p:inline>
+			</p:input>
+		</p:insert>
+	</p:declare-step>
+	
+	<p:declare-step type="chymistry:insert-remote-html" name="insert-remote-html">
+		<!-- Retrieve a snippet of HTML from a remote location and insert it into a particular place in the source HTML -->
+		<p:option name="href" required="true"/>
+		<p:option name="position" required="true"/>
+		<p:option name="match" required="true"/>
+		<p:input port="source"/>
+		<p:output port="result"/>
+		<!-- TODO add local caching -->
+		<p:add-attribute attribute-name="href" match="/c:request">
+			<p:with-option name="attribute-value" select="$href"/>
+			<p:input port="source">
+				<p:inline>
+					<c:request method="GET"/>
+				</p:inline>
+			</p:input>
+		</p:add-attribute>
+		<p:http-request/>
+		<!-- convert to XHTML -->
+		<p:unescape-markup content-type="text/html" charset="utf-8"/>
+		<p:filter name="insertion-html" select="/c:body/html:*"/>
+		<!-- insert the remote HTML into the source HTML -->
+		<p:insert>
+			<p:with-option name="match" select="$match"/>
+			<p:with-option name="position" select="$position"/>
+			<p:input port="insertion">
+				<p:pipe step="insertion-html" port="result"/>
+			</p:input>	
+			<p:input port="source">
+				<p:pipe step="insert-remote-html" port="source"/>
+			</p:input>
+		</p:insert>
+	</p:declare-step>
+	
+	<p:declare-step type="chymistry:site-index">
+		<p:input port="source"/>
+		<p:output port="result"/>
+		<p:xslt>
+			<p:input port="parameters"><p:empty/></p:input>
+			<p:input port="stylesheet">
+				<p:document href="../xslt/render-menus-as-site-index.xsl"/>
+			</p:input>
+		</p:xslt>
+	</p:declare-step>
+	
 	<!-- common web application utility pipelines -->
 	<p:import href="xproc-z-library.xpl"/>	
 	<!-- pipelines to produce P5 from a remote repository of P4 text -->
@@ -320,129 +444,5 @@
 			<chymistry:add-site-navigation/>
 		</p:otherwise>
 	</p:choose>
-	
-	<p:declare-step type="chymistry:figure">
-		<p:option name="relative-uri" required="true"/>
-		<p:output port="result"/>
-		<p:template name="figure-request">
-			<p:with-param name="relative-uri" select="$relative-uri"/>
-			<p:input port="template">
-				<p:inline>
-					<c:request detailed="true" method="get" href="{
-						replace(
-							$relative-uri,
-							'^text/([^/]+)/figure/(.*)',
-							'../figure/$1/$2'
-						)
-					}"/>
-				</p:inline>
-			</p:input>
-			<p:input port="source">
-				<p:empty/>
-			</p:input>
-		</p:template>
-		<p:try>
-			<p:group>
-				<p:http-request/>
-				<p:template name="http-response">
-					<p:input port="parameters"><p:empty/></p:input>
-					<p:input port="template">
-						<p:inline>
-							<c:response status="200">
-								<c:header name="X-Powered-By" value="XProc using XML Calabash"/>
-								<c:header name="Server" value="XProc-Z"/>
-								<c:header name="Cache-Control" value="max-age=3600"/>
-								<c:body content-type="image/gif" encoding="base64">
-									{//c:body/text()}
-								</c:body>
-							</c:response>
-						</p:inline>
-					</p:input>
-				</p:template>
-			</p:group>
-			<p:catch>
-				<z:not-found/>
-			</p:catch>
-		</p:try>
-	</p:declare-step>
-
-	<p:declare-step type="chymistry:add-site-navigation">
-		<p:input port="source"/>
-		<p:output port="result"/>
-		<p:option name="current-uri" select=" () "/>
-		<p:xslt>
-			<p:with-param name="current-uri" select="$current-uri"/>
-			<p:input port="stylesheet">
-				<p:document href="../xslt/add-site-navigation.xsl"/>
-			</p:input>
-		</p:xslt>
-		<chymistry:add-institutional-branding/>
-	</p:declare-step>	
-	
-	<p:declare-step type="chymistry:add-institutional-branding" name="add-institutional-branding">
-		<p:input port="source"/>
-		<p:output port="result"/>
-		<chymistry:insert-remote-html 
-			href="https://assets.iu.edu/brand/3.x/header-iub.html"
-			match="html:body/html:header[tokenize(@class)='page-header']" 
-			position="first-child"
-		/>
-		<chymistry:insert-remote-html 
-			href="https://assets.iu.edu/brand/3.x/footer.html"
-			match="html:body/html:footer[tokenize(@class)='page-footer']" 
-			position="last-child"
-		/>
-		<p:insert match="html:head" position="first-child">
-			<p:input port="insertion">
-				<p:inline xmlns="http://www.w3.org/1999/xhtml" exclude-inline-prefixes="chymistry">
-					<link href="https://assets.iu.edu/brand/3.x/brand.css" rel="stylesheet" type="text/css"/>
-				</p:inline>
-			</p:input>
-		</p:insert>
-	</p:declare-step>
-	
-	<p:declare-step type="chymistry:insert-remote-html" name="insert-remote-html">
-		<!-- Retrieve a snippet of HTML from a remote location and insert it into a particular place in the source HTML -->
-		<p:option name="href" required="true"/>
-		<p:option name="position" required="true"/>
-		<p:option name="match" required="true"/>
-		<p:input port="source"/>
-		<p:output port="result"/>
-		<!-- TODO add local caching -->
-		<p:add-attribute attribute-name="href" match="/c:request">
-			<p:with-option name="attribute-value" select="$href"/>
-			<p:input port="source">
-				<p:inline>
-					<c:request method="GET"/>
-				</p:inline>
-			</p:input>
-		</p:add-attribute>
-		<p:http-request/>
-		<!-- convert to XHTML -->
-		<p:unescape-markup content-type="text/html" charset="utf-8"/>
-		<p:filter name="insertion-html" select="/c:body/html:*"/>
-		<!-- insert the remote HTML into the source HTML -->
-		<p:insert>
-			<p:with-option name="match" select="$match"/>
-			<p:with-option name="position" select="$position"/>
-			<p:input port="insertion">
-				<p:pipe step="insertion-html" port="result"/>
-			</p:input>	
-			<p:input port="source">
-				<p:pipe step="insert-remote-html" port="source"/>
-			</p:input>
-		</p:insert>
-	</p:declare-step>
-	
-	<p:declare-step type="chymistry:site-index">
-		<p:input port="source"/>
-		<p:output port="result"/>
-		<p:xslt>
-			<p:input port="parameters"><p:empty/></p:input>
-			<p:input port="stylesheet">
-				<p:document href="../xslt/render-menus-as-site-index.xsl"/>
-			</p:input>
-		</p:xslt>
-	</p:declare-step>
 	
 </p:declare-step>
