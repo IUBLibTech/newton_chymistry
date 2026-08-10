@@ -342,12 +342,18 @@ NEW >> April 2012
 
 .type-catch {
 	text-align: left;
-	margin-left: 25em
+	text-indent: 25em;
 }
 
 .type-pag {
 	width: 65%
 }
+/* rightmid placed here because only used with catchwords in double columns */
+.place-rightmid{
+    text-align: left;
+    margin-left: -10em;
+    display: block;
+    }
 
 .rend-parallel-docs {
 	display: flex;
