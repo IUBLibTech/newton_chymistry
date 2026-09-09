@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Verifying you are human</title>
+        <script>
+            function onTurnstileSuccess(token) {
+                document.cookie = "_3fa=:" + token + ":;path=/;domain=." + window.location.hostname + ";"
+                location.reload();
+            }            
+        </script>
+        <style>
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Verifying you are human.  This may take a few seconds.</h1>
+        <div class="cf-turnstile" data-sitekey="${site_key}" data-callback="onTurnstileSuccess"></div>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    </body>    
+</html>

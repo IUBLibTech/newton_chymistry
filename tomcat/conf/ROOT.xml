@@ -1,0 +1,11 @@
+<Context path=""
+    docBase="/app/newton_chymistry/tomcat/lib/xproc-z.war"
+    preemptiveAuthentication="true"
+    antiResourceLocking="false">
+  <Valve className="org.apache.catalina.authenticator.BasicAuthenticator" />
+  <Parameter name="xproc-z.main" value="/app/newton_chymistry/xproc/xproc-z.xpl" override="false"/>
+  <Parameter name="solr-base-uri" value="http://solr:8983/solr/newton_chymistry/"/>
+  <!-- select the subset of Xubmit documents to ingest by specifying a regex which the dc:coverage field must match -->
+  <!-- ".*" matches any value -->
+  <Parameter name="dc-coverage-regex" value="Production"/>
+</Context>

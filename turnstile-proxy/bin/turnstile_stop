@@ -1,0 +1,10 @@
+#!/bin/bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+PIDFILE=$SCRIPT_DIR/../turnstile_proxy.pid
+
+if [ -e $PIDFILE ]; then
+	kill -9 $(cat $PIDFILE)
+	rm $PIDFILE
+else
+	echo "PID file doesn't exist so it's proabably not running"
+fi
