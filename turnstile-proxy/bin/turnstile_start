@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ ! -f "$APP_HOME/turnstile-proxy/.venv/bin/activate" ]]; then
+    echo "Make sure we have the Python virtual environment"
+    python3 -m venv $APP_HOME/turnstile-proxy/.venv && \
+    . $APP_HOME/turnstile-proxy/.venv/bin/activate && \
+    pip install  -r $APP_HOME/turnstile-proxy/turnstile_proxy/requirements.txt
+fi
+
+cd $APP_HOME/turnstile-proxy/turnstile_proxy
+
+CONFIG_FILE="$APP_HOME/turnstile-proxy/turnstile_proxy/turnstile_proxy.yaml"
+
+if [[ -f "/run/secrets/turnstile_proxy.yaml" ]]; then
+  CONFIG_FILE="/run/secrets/turnstile_proxy.yaml"
+fi
+
+. $APP_HOME/turnstile-proxy/.venv/bin/activate
+./turnstile_proxy.py --debug --debug_tests $CONFIG_FILE "$@"
+
+

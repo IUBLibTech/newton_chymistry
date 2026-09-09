@@ -33,3 +33,9 @@ FROM base AS app
 
 # Copy application code
 COPY --chown=app:app . $APP_HOME
+
+RUN python3 -m venv $APP_HOME/turnstile-proxy/.venv && \
+    . $APP_HOME/turnstile-proxy/.venv/bin/activate && \
+    pip install  -r $APP_HOME/turnstile-proxy/turnstile_proxy/requirements.txt
+
+CMD ["catalina.sh", "run"]
