@@ -16,6 +16,6 @@ if [[ -f "/run/secrets/turnstile_proxy.yaml" ]]; then
 fi
 
 . $APP_HOME/turnstile-proxy/.venv/bin/activate
-./turnstile_proxy.py --debug --debug_tests $CONFIG_FILE "$@"
+./turnstile_proxy.py $CONFIG_FILE "$@"
 
 
