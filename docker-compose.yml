@@ -14,6 +14,8 @@ services:
       - ./tomcat/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./tomcat/conf/web.xml:/usr/local/tomcat/conf/web.xml
       - ./tomcat/conf/ROOT.xml:/usr/local/tomcat/conf/Catalina/localhost/ROOT.xml
+      # Override the proxy configuration by mounting onto /run/secrets
+      # - ./secrets/turnstile_proxy.yaml:/run/secrets/turnstile_proxy.yaml
     depends_on:
       - solr
     ports:

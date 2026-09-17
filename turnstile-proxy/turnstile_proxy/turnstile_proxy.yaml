@@ -12,30 +12,34 @@ backend: http://0.0.0.0:8080
 default_action: pass
 
 rules:
-  - pattern: ~^/search/
-    local: no
-    action: check
-
-  - pattern: ~highlight
-    local: no
-    action: check
-    with_query: true
-
-  - pattern: ~^/search
-    local: no
-    action: pass
-
   # don't mess with obvious support files
   - pattern: ~\.(jpg|png|gif|webm|js|css|svg|pdf|woff)$
     action: pass
-  
-  # allow search engines in
+
+  # allow local networks in
+  - pattern: ~.
+    local: yes
+    action: pass
+
+  # allow good search engines in
   - pattern: ~.
     search_engine: yes
     action: pass
 
   # non-search engine crawlers need to go away
   - pattern: ~.
-    search_engine: no
     crawler: yes
     action: deny
+
+  - pattern: ~^/search/
+    action: check
+
+  - pattern: ~highlight
+    action: check
+    with_query: true
+
+  - pattern: ~^/search
+    action: pass
+
+
+  

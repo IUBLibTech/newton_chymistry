@@ -145,6 +145,11 @@ def is_search(mode: Trit, request: Request) -> Trit:
             else:
                 return Trit.NO
 
+        elif 'challenge_test' in ua:
+              # We're trying to pretend to be a good bot that gets a pass, which
+              # is helpful for testing rules and patterns in the configuration
+              return Trit.YES
+
         elif 'bingbot/' in ua:
             # Bing sez that you do the forward search and look for a name ending 
             # with search.msn.com and then verify the reverse lookup is the same
