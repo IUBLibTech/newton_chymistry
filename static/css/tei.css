@@ -145,6 +145,16 @@ ul.tei-list.type-disjunctive {
 	line-height: 1em;
 	margin-left: -2em;
 }
+/*extra template added to correct alignment of rend="bracket" disjunctive lists in margin-left */
+ul.tei-list.rend-bracket.type-disjunctive {
+	display: inline-block;
+	vertical-align: middle;
+	list-style-type: none;
+	font-size: small;
+	text-align: center;
+	line-height: 1em;
+	margin-left: 0em;
+}
 li {
 	margin-bottom: 0.25em;
 }
